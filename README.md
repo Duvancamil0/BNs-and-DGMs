@@ -36,6 +36,5 @@ Use the R Notebooks in each benchmark BN folder to recreate the small datasets s
 As this is a research repository, we might not be accepting contributions. However, you are welcome to use and adapt the code and methodologies for your own research following appropriate citation norms.
 
 ## Contact
-For any comments or queries, please contact us at [your contact information].
+For any comments or queries, please contact us at kamiloduvan@gmail.com.
 ```
-Please replace `[your contact information]` with your preferred contact info.
