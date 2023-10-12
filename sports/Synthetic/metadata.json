@@ -1,0 +1,32 @@
+{
+    "columns": {
+        "RDlevel": {
+            "sdtype": "categorical"
+        },
+        "HTshots": {
+            "sdtype": "categorical"
+        },
+        "ATshots": {
+            "sdtype": "categorical"
+        },
+        "HTshotOnTarget": {
+            "sdtype": "categorical"
+        },
+        "ATshotsOnTarget": {
+            "sdtype": "categorical"
+        },
+        "possession": {
+            "sdtype": "categorical"
+        },
+        "HTgoals": {
+            "sdtype": "categorical"
+        },
+        "ATgoals": {
+            "sdtype": "categorical"
+        },
+        "HDA": {
+            "sdtype": "categorical"
+        }
+    },
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1"
+}
