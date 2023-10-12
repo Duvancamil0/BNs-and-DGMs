@@ -1,0 +1,195 @@
+---
+title: "Learning BNs - INSURANCE synthetic 500"
+output: html_notebook
+---
+
+Learning of BNs from augmented datasets created via deep generative models.
+
+Get the libraries
+```{r}
+library(bnlearn)
+library(dplyr)
+library(Rgraphviz)
+```
+
+Import the original data
+```{r}
+data("insurance")
+df <- insurance
+summary(df)
+```
+Original BN
+```{r}
+modelstring = paste0("[Age][Mileage][SocioEcon|Age][GoodStudent|Age:SocioEcon]",
+  "[RiskAversion|Age:SocioEcon][OtherCar|SocioEcon][VehicleYear|SocioEcon:RiskAversion]",
+  "[MakeModel|SocioEcon:RiskAversion][SeniorTrain|Age:RiskAversion]",
+  "[HomeBase|SocioEcon:RiskAversion][AntiTheft|SocioEcon:RiskAversion]",
+  "[RuggedAuto|VehicleYear:MakeModel][Antilock|VehicleYear:MakeModel]",
+  "[DrivingSkill|Age:SeniorTrain][CarValue|VehicleYear:MakeModel:Mileage]",
+  "[Airbag|VehicleYear:MakeModel][DrivQuality|RiskAversion:DrivingSkill]",
+  "[Theft|CarValue:HomeBase:AntiTheft][Cushioning|RuggedAuto:Airbag]",
+  "[DrivHist|RiskAversion:DrivingSkill][Accident|DrivQuality:Mileage:Antilock]",
+  "[ThisCarDam|RuggedAuto:Accident][OtherCarCost|RuggedAuto:Accident]",
+  "[MedCost|Age:Accident:Cushioning][ILiCost|Accident]",
+  "[ThisCarCost|ThisCarDam:Theft:CarValue][PropCost|ThisCarCost:OtherCarCost]")
+original = model2network(modelstring)
+graphviz.plot(original, shape = "ellipse")
+
+fitted_original = bn.fit(original, df, method = "bayes")
+
+distance <- 0
+bayes_factor <- 0
+bics <- score(original, df, type = "bic")
+kullback <- 0
+```
+
+Get the sample 500 dataset
+```{r}
+stratified_500 = read.csv("/insurance/Samples/stratified_500.csv")
+stratified_500[sapply(stratified_500, is.character)] <- 
+  lapply(stratified_500[sapply(stratified_500, is.character)],as.factor)
+summary(stratified_500)
+```
+
+Add the missing levels
+```{r}
+levels(stratified_500$ThisCarCost) <- c(levels(stratified_500$ThisCarCost), 'Million')
+levels(stratified_500$Theft) <- c(levels(stratified_500$Theft), 'True')
+
+summary(stratified_500)
+```
+
+Import the synthetic 500 data
+```{r}
+synthetic_500 = read.csv("/insurance/Synthetic/CTGAN/insurance_500_syn.csv")
+synthetic_500[sapply(synthetic_500, is.character)] <- 
+  lapply(synthetic_500[sapply(synthetic_500, is.character)],as.factor)
+summary(synthetic_500)
+```
+
+# Get 500*2 synthetic samples
+```{r}
+set.seed(1)
+synthetic_500_2 <- synthetic_500 %>%
+  group_by(Age) %>%
+  sample_frac(size=0.1)
+synthetic_500_2 <- as.data.frame(synthetic_500_2)
+summary(synthetic_500_2)
+```
+
+Perform Union on the datasets
+```{r}
+synthetic_500_u_2 <- rbind(synthetic_500_2, stratified_500)
+summary(synthetic_500_u_2)
+```
+
+Learn the BN structure with the synthetic data from stratified_500_2
+```{r}
+BN_synth_500_2 <- tabu(synthetic_500_u_2)
+fitted_synth_500_2 = bn.fit(original, synthetic_500_u_2, method = "bayes")
+graphviz.plot(BN_synth_500_2)
+
+distance <- c(distance, shd(original, BN_synth_500_2, debug = TRUE))
+bayes_factor <- c(bayes_factor, BF(original, BN_synth_500_2, df, score = "bds"))
+bics <- c(bics,score(BN_synth_500_2, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_500_2))
+```
+
+# Get 500*5 synthetic samples
+```{r}
+set.seed(1)
+synthetic_500_5 <- synthetic_500 %>%
+  group_by(Age) %>%
+  sample_frac(size=0.25)
+synthetic_500_5 <- as.data.frame(synthetic_500_5)
+summary(synthetic_500_5)
+```
+
+Perform Union on the datasets
+```{r}
+synthetic_500_u_5 <- rbind(synthetic_500_5, stratified_500)
+summary(synthetic_500_u_5)
+```
+
+Learn the BN structure with the synthetic data from stratified_500_5
+```{r}
+BN_synth_500_5 <- tabu(synthetic_500_u_5)
+fitted_synth_500_5 = bn.fit(original, synthetic_500_u_5, method = "bayes")
+graphviz.plot(BN_synth_500_5)
+
+distance <- c(distance, shd(original, BN_synth_500_5, debug = TRUE))
+bayes_factor <- c(bayes_factor, BF(original, BN_synth_500_5, df, score = "bds"))
+bics <- c(bics,score(BN_synth_500_5, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_500_5))
+```
+
+# Get 500*10 synthetic samples
+```{r}
+set.seed(1)
+synthetic_500_10 <- synthetic_500 %>%
+  group_by(Age) %>%
+  sample_frac(size=0.50)
+synthetic_500_10 <- as.data.frame(synthetic_500_10)
+summary(synthetic_500_10)
+```
+
+Perform Union on the datasets
+```{r}
+synthetic_500_u_10 <- rbind(synthetic_500_10, stratified_500)
+summary(synthetic_500_u_10)
+```
+
+Learn the BN structure with the synthetic data from stratified_500_10
+```{r}
+BN_synth_500_10 <- tabu(synthetic_500_u_10)
+fitted_synth_500_10 = bn.fit(original, synthetic_500_u_10, method = "bayes")
+graphviz.plot(BN_synth_500_10)
+
+distance <- c(distance, shd(original, BN_synth_500_10, debug = TRUE))
+bayes_factor <- c(bayes_factor, BF(original, BN_synth_500_10, df, score = "bds"))
+bics <- c(bics,score(BN_synth_500_10, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_500_10))
+```
+
+# Get 500*20 synthetic samples
+```{r}
+set.seed(1)
+synthetic_500_20 <- synthetic_500
+summary(synthetic_500_20)
+```
+
+Perform Union on the datasets
+```{r}
+synthetic_500_u_20 <- rbind(synthetic_500_20, stratified_500)
+summary(synthetic_500_u_20)
+```
+
+Learn the BN structure with the synthetic data from stratified_500_20
+```{r}
+BN_synth_500_20 <- tabu(synthetic_500_u_20)
+fitted_synth_500_20 = bn.fit(original, synthetic_500_u_20, method = "bayes")
+graphviz.plot(BN_synth_500_20)
+
+distance <- c(distance, shd(original, BN_synth_500_20, debug = TRUE))
+bayes_factor <- c(bayes_factor, BF(original, BN_synth_500_20, df, score = "bds"))
+bics <- c(bics,score(BN_synth_500_20, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_500_20))
+```
+
+# Metrics
+```{r}
+matrix_empty <- matrix(nrow = 5, ncol = 1)
+metrics_table = data.frame(matrix_empty)
+metrics_table$bics <- bics
+metrics_table$bf <- bayes_factor
+metrics_table$shd <- distance
+metrics_table$kullback <- kullback
+metrics_table <- metrics_table[,-c(1)]
+row.names(metrics_table) <- c("Full", "Sample*2", "Sample*5", "Sample*10", "Sample*20")
+metrics_table
+```
+

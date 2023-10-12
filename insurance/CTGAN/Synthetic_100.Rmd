@@ -1,0 +1,199 @@
+---
+title: "Learning BNs - INSURANCE synthetic 100"
+output: html_notebook
+---
+
+Learning of BNs from augmented datasets created via deep generative models.
+
+Get the libraries
+```{r}
+library(bnlearn)
+library(dplyr)
+library(Rgraphviz)
+```
+
+Import the original data
+```{r}
+data("insurance")
+df <- insurance
+summary(df)
+```
+Original BN
+```{r}
+modelstring = paste0("[Age][Mileage][SocioEcon|Age][GoodStudent|Age:SocioEcon]",
+  "[RiskAversion|Age:SocioEcon][OtherCar|SocioEcon][VehicleYear|SocioEcon:RiskAversion]",
+  "[MakeModel|SocioEcon:RiskAversion][SeniorTrain|Age:RiskAversion]",
+  "[HomeBase|SocioEcon:RiskAversion][AntiTheft|SocioEcon:RiskAversion]",
+  "[RuggedAuto|VehicleYear:MakeModel][Antilock|VehicleYear:MakeModel]",
+  "[DrivingSkill|Age:SeniorTrain][CarValue|VehicleYear:MakeModel:Mileage]",
+  "[Airbag|VehicleYear:MakeModel][DrivQuality|RiskAversion:DrivingSkill]",
+  "[Theft|CarValue:HomeBase:AntiTheft][Cushioning|RuggedAuto:Airbag]",
+  "[DrivHist|RiskAversion:DrivingSkill][Accident|DrivQuality:Mileage:Antilock]",
+  "[ThisCarDam|RuggedAuto:Accident][OtherCarCost|RuggedAuto:Accident]",
+  "[MedCost|Age:Accident:Cushioning][ILiCost|Accident]",
+  "[ThisCarCost|ThisCarDam:Theft:CarValue][PropCost|ThisCarCost:OtherCarCost]")
+original = model2network(modelstring)
+graphviz.plot(original, shape = "ellipse")
+
+fitted_original = bn.fit(original, df, method = "bayes")
+
+distance <- 0
+bayes_factor <- 0
+bics <- score(original, df, type = "bic")
+kullback <- 0
+```
+
+Get the sample 100 dataset
+```{r}
+stratified_100 = read.csv("/Samples/stratified_100.csv")
+stratified_100[sapply(stratified_100, is.character)] <- 
+  lapply(stratified_100[sapply(stratified_100, is.character)],as.factor)
+summary(stratified_100)
+```
+
+Add the missing levels
+```{r}
+levels(stratified_100$ThisCarCost) <- c(levels(stratified_100$ThisCarCost), 'Million')
+levels(stratified_100$Theft) <- c(levels(stratified_100$Theft), 'True')
+levels(stratified_100$MedCost) <- c(levels(stratified_100$MedCost),'Million')
+levels(stratified_100$ILiCost) <- c(levels(stratified_100$ILiCost),'Million')
+
+stratified_100[sapply(stratified_100, is.character)] <- 
+  lapply(stratified_100[sapply(stratified_100, is.character)],as.factor)
+summary(stratified_100)
+```
+
+Import the synthetic 100 data
+```{r}
+synthetic_100 = read.csv("/Synthetic/CTGAN/insurance_100_syn.csv")
+synthetic_100[sapply(synthetic_100, is.character)] <- 
+  lapply(synthetic_100[sapply(synthetic_100, is.character)],as.factor)
+summary(synthetic_100)
+```
+
+# Get 100*2 synthetic samples
+```{r}
+set.seed(1)
+synthetic_100_2 <- synthetic_100 %>%
+  group_by(Age) %>%
+  sample_frac(size=0.1)
+synthetic_100_2 <- as.data.frame(synthetic_100_2)
+summary(synthetic_100_2)
+```
+
+Perform Union on the datasets
+```{r}
+synthetic_100_u_2 <- rbind(synthetic_100_2, stratified_100)
+summary(synthetic_100_u_2)
+```
+
+Learn the BN structure with the synthetic data from stratified_100_2
+```{r}
+BN_synth_100_2 <- tabu(synthetic_100_u_2)
+fitted_synth_100_2 = bn.fit(original, synthetic_100_u_2, method = "bayes")
+graphviz.plot(BN_synth_100_2)
+
+distance <- c(distance, shd(original, BN_synth_100_2, debug = TRUE))
+bayes_factor <- c(bayes_factor, BF(original, BN_synth_100_2, df, score = "bds"))
+bics <- c(bics,score(BN_synth_100_2, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_100_2))
+```
+
+# Get 100*5 synthetic samples
+```{r}
+set.seed(1)
+synthetic_100_5 <- synthetic_100 %>%
+  group_by(Age) %>%
+  sample_frac(size=0.25)
+synthetic_100_5 <- as.data.frame(synthetic_100_5)
+summary(synthetic_100_5)
+```
+
+Perform Union on the datasets
+```{r}
+synthetic_100_u_5 <- rbind(synthetic_100_5, stratified_100)
+summary(synthetic_100_u_5)
+```
+
+
+Learn the BN structure with the synthetic data from stratified_100_5
+```{r}
+BN_synth_100_5 <- tabu(synthetic_100_u_5)
+fitted_synth_100_5 = bn.fit(original, synthetic_100_u_5, method = "bayes")
+graphviz.plot(BN_synth_100_5)
+
+distance <- c(distance, shd(original, BN_synth_100_5, debug = TRUE))
+bayes_factor <- c(bayes_factor, BF(original, BN_synth_100_5, df, score = "bds"))
+bics <- c(bics,score(BN_synth_100_5, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_100_5))
+```
+
+# Get 100*10 synthetic samples
+```{r}
+set.seed(1)
+synthetic_100_10 <- synthetic_100 %>%
+  group_by(Age) %>%
+  sample_frac(size=0.5)
+synthetic_100_10 <- as.data.frame(synthetic_100_10)
+summary(synthetic_100_10)
+```
+
+Union the datasets
+```{r}
+synthetic_100_u_10 <- rbind(synthetic_100_10, stratified_100)
+summary(synthetic_100_u_10)
+```
+
+Learn the BN structure with the synthetic data from stratified_100_u_10
+```{r}
+BN_synth_100_10 <- tabu(synthetic_100_u_10)
+fitted_synth_100_10 = bn.fit(original, synthetic_100_u_10, method = "bayes")
+graphviz.plot(BN_synth_100_10)
+
+distance <- c(distance,shd(original, BN_synth_100_10, debug = TRUE))
+bayes_factor <- c(bayes_factor,BF(original, BN_synth_100_10, df, score = "bds"))
+bics <- c(bics,score(BN_synth_100_10, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_100_10))
+```
+
+# Get 100*20 synthetic samples
+```{r}
+set.seed(1)
+synthetic_100_20 <- synthetic_100
+summary(synthetic_100_20)
+```
+
+Union the datasets
+```{r}
+synthetic_100_u_20 <- rbind(synthetic_100_20, stratified_100)
+summary(synthetic_100_u_20)
+```
+
+Learn the BN structure with the synthetic data from stratified_100_u_20
+```{r}
+BN_synth_100_20 <- tabu(synthetic_100_u_20)
+fitted_synth_100_20 = bn.fit(original, synthetic_100_u_20, method = "bayes")
+graphviz.plot(BN_synth_100_20)
+
+distance <- c(distance,shd(original, BN_synth_100_20, debug = TRUE))
+bayes_factor <- c(bayes_factor,BF(original, BN_synth_100_20, df, score = "bds"))
+bics <- c(bics, score(BN_synth_100_20, df, type = "bic"))
+
+kullback <- c(kullback, KL(fitted_original, fitted_synth_100_20))
+```
+
+# Metrics
+```{r}
+matrix_empty <- matrix(nrow = 5, ncol = 1)
+metrics_table = data.frame(matrix_empty)
+metrics_table$bics <- bics
+metrics_table$bf <- bayes_factor
+metrics_table$shd <- distance
+metrics_table$kullback <- kullback
+metrics_table <- metrics_table[,-c(1)]
+row.names(metrics_table) <- c("Full", "Sample*2", "Sample*5", "Sample*10", "Sample*20")
+metrics_table
+```

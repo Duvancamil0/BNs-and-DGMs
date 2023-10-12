@@ -1,0 +1,138 @@
+---
+title: "Learning BNs - INSURANCE"
+output: html_notebook
+---
+Insurance is a network for evaluating car insurance risks.
+Binder J, Koller D, Russell S, Kanazawa K (1997). "Adaptive Probabilistic Networks with Hidden Variables". Machine Learning, 29(2–3):213–244.
+
+Get the libraries
+```{r}
+library(bnlearn)
+library(dplyr)
+library(Rgraphviz)
+```
+
+Import the data
+```{r}
+data("insurance")
+df <- insurance
+summary(df)
+```
+
+Original BN
+```{r}
+modelstring = paste0("[Age][Mileage][SocioEcon|Age][GoodStudent|Age:SocioEcon]",
+  "[RiskAversion|Age:SocioEcon][OtherCar|SocioEcon][VehicleYear|SocioEcon:RiskAversion]",
+  "[MakeModel|SocioEcon:RiskAversion][SeniorTrain|Age:RiskAversion]",
+  "[HomeBase|SocioEcon:RiskAversion][AntiTheft|SocioEcon:RiskAversion]",
+  "[RuggedAuto|VehicleYear:MakeModel][Antilock|VehicleYear:MakeModel]",
+  "[DrivingSkill|Age:SeniorTrain][CarValue|VehicleYear:MakeModel:Mileage]",
+  "[Airbag|VehicleYear:MakeModel][DrivQuality|RiskAversion:DrivingSkill]",
+  "[Theft|CarValue:HomeBase:AntiTheft][Cushioning|RuggedAuto:Airbag]",
+  "[DrivHist|RiskAversion:DrivingSkill][Accident|DrivQuality:Mileage:Antilock]",
+  "[ThisCarDam|RuggedAuto:Accident][OtherCarCost|RuggedAuto:Accident]",
+  "[MedCost|Age:Accident:Cushioning][ILiCost|Accident]",
+  "[ThisCarCost|ThisCarDam:Theft:CarValue][PropCost|ThisCarCost:OtherCarCost]")
+original = model2network(modelstring)
+graphviz.plot(original, shape = "ellipse")
+score(original, df, type = "bic")
+fitted_original = bn.fit(original, df, method = "bayes")
+```
+sample 1000 data points
+```{r}
+set.seed(1)
+stratified_1000 <- df %>%
+  group_by(Age) %>%
+  sample_frac(size=0.05)
+stratified_1000 <- as.data.frame(stratified_1000)
+summary(stratified_1000)
+write.csv(stratified_1000, "/insurance/Samples/stratified_1000.csv", row.names=FALSE)
+```
+
+sample 500 data points
+```{r}
+set.seed(1)
+stratified_500 <- stratified_1000 %>%
+  group_by(Age) %>%
+  sample_frac(size=0.5)
+stratified_500 <- as.data.frame(stratified_500)
+summary(stratified_500)
+write.csv(stratified_500, "/insurance/Samples/stratified_500.csv", row.names=FALSE)
+```
+
+sample 100 data points
+```{r}
+set.seed(1)
+stratified_100 <- stratified_500 %>%
+  group_by(Age) %>%
+  sample_frac(size=0.2)
+stratified_100 <- as.data.frame(stratified_100)
+summary(stratified_100)
+write.csv(stratified_100, "/insurance/Samples/stratified_100.csv", row.names=FALSE)
+```
+
+Learn the BN structure with full data
+```{r}
+BN_full <- tabu(df)
+fitted_full = bn.fit(original, df, method = "bayes")
+graphviz.plot(BN_full)
+
+distance <- shd(original, BN_full, debug = TRUE)
+bayes_factor <- BF(original, BN_full, df, score = "bds")
+bics <- score(BN_full, df, type = "bic")
+
+kullback <- KL(fitted_original, fitted_full)
+```
+
+Learn the BN structure with 100 data points
+```{r}
+BN_100 <- tabu(stratified_100)
+fitted_100 <- bn.fit(original, stratified_100, method = "bayes")
+graphviz.plot(BN_100)
+
+distance <- c(distance,shd(original, BN_100, debug = TRUE))
+bayes_factor <- c(bayes_factor,BF(original, BN_100, df, score = "bds"))
+bics <- c(bics,score(BN_100, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_100))
+```
+
+Learn the BN structure with 500 data points
+```{r}
+BN_500 <- tabu(stratified_500)
+fitted_500 <- bn.fit(original, stratified_500, method = "bayes")
+graphviz.plot(BN_500)
+
+distance <- c(distance,shd(original, BN_500, debug = TRUE))
+bayes_factor <- c(bayes_factor,BF(original, BN_500, df, score = "bds"))
+bics <- c(bics,score(BN_500, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_500))
+```
+
+Learn the BN structure with 1,000 data points
+```{r}
+BN_1000 <- tabu(stratified_1000)
+fitted_1000 <- bn.fit(original, stratified_1000, method = "bayes")
+graphviz.plot(BN_1000)
+
+distance <- c(distance,shd(original, BN_1000, debug = TRUE))
+bayes_factor <- c(bayes_factor,BF(original, BN_1000, df, score = "bds"))
+bics <- c(bics,score(BN_1000, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_1000))
+```
+
+
+# Metrics
+```{r}
+matrix_empty <- matrix(nrow = 4, ncol = 1)
+metrics_table = data.frame(matrix_empty) 
+metrics_table$bics <- bics
+metrics_table$bf <- bayes_factor
+metrics_table$shd <- distance
+metrics_table$kullback <- kullback
+metrics_table <- metrics_table[,-c(1)]
+row.names(metrics_table) <- c("Full", "Sample100", "Sample500", "Sample1000")
+metrics_table
+```
