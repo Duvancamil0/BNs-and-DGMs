@@ -1,6 +1,6 @@
 # Improving Bayesian Network Learning in Project Risk Management through Deep Generative Models
 
-This repository contains code and associated data for our research paper (DAVID, Camilo; SUZUKI,Ken-ichi) on the application of Deep Generative Models to improve Bayesian Network learning in the context of project risk management.
+This repository contains code and associated data for our research paper (DAVID, Duvan Camilo; SUZUKI,Ken-ichi) on the application of Deep Generative Models to improve Bayesian Network learning in the context of project risk management.
 
 ## Structure
 This repository is organized into several folders, each named after the Benchmark Bayesian Networks (BNs) used in this study: `alarm`, `asia`, `insurance`, `sports`, and `prm` (an acronym for Project Risk Management). There is also a folder named `mineros` containing data from a real-world case provided by a mining company.
