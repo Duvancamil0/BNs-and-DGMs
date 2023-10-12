@@ -1,0 +1,32 @@
+{
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+    "columns": {
+        "Schedule": {
+            "sdtype": "categorical"
+        },
+        "Budget": {
+            "sdtype": "categorical"
+        },
+        "Risk_1": {
+            "sdtype": "categorical"
+        },
+        "Risk_2": {
+            "sdtype": "categorical"
+        },
+        "Risk_3": {
+            "sdtype": "categorical"
+        },
+        "Project_Risk": {
+            "sdtype": "categorical"
+        },
+        "Complexity": {
+            "sdtype": "categorical"
+        },
+        "Type": {
+            "sdtype": "categorical"
+        },
+        "Overrun": {
+            "sdtype": "categorical"
+        }
+    }
+}

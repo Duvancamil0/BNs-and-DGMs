@@ -1,0 +1,259 @@
+---
+title: "prm Project Risk Management"
+output: html_notebook
+---
+
+Load the libraries
+```{r}
+library(bnlearn)
+library(Rgraphviz)
+library(dplyr)
+```
+
+Creating the Structure
+
+```{r}
+dag <- empty.graph(nodes = c("Schedule","Budget","Risk_1","Risk_2","Risk_3",
+                             "Project_Risk","Complexity","Type","Overrun"))
+arc.set <- matrix(c("Schedule","Risk_1",
+                    "Budget", "Risk_2",
+                    "Risk_1", "Risk_2",
+                    "Risk_2", "Risk_3",
+                    "Complexity", "Risk_3",
+                    "Risk_1", "Project_Risk",
+                    "Risk_2", "Project_Risk",
+                    "Risk_3", "Project_Risk",
+                    "Project_Risk", "Overrun",
+                    "Complexity", "Overrun",
+                    "Type", "Overrun"),
+                  byrow = TRUE, ncol = 2,
+                  dimnames = list(NULL, c("from","to")))
+arcs(dag) <- arc.set
+graphviz.plot(dag, shape = "ellipse")
+```
+
+Assign the level to each node
+```{r}
+Schedule.lv <- c("short","large")
+Budget.lv <- c("small","large")
+Risk_1.lv <- c("yes","no")
+Risk_2.lv <- c("yes","no")
+Risk_3.lv <- c("yes","no")
+Project_Risk.lv <- c("low","medium", "high")
+Complexity.lv <- c("easy","hard")
+Type.lv <- c("A","B")
+Overrun.lv <- c("acceptable","unacceptable")
+```
+
+Assign the probabilities to each node
+```{r}
+Schedule.prob <- array(c(0.78,0.22), dim = 2, dimnames = list(Schedule = Schedule.lv))
+Budget.prob <- array(c(0.67,0.33), dim = 2, dimnames = list(Budget = Budget.lv))
+Complexity.prob <- array(c(0.8,0.2), dim = 2, dimnames = list(Complexity = Complexity.lv))
+Type.prob <- array(c(0.9,0.1), dim = 2, dimnames = list(Type = Type.lv))
+
+Risk_1.prob <- array(c(0.6,0.4,0.5,0.5), dim = c(2,2), 
+                     dimnames = list(Risk_1 = Risk_1.lv,
+                                     Schedule = Schedule.lv))
+
+Risk_2.prob <- array(c(0.6,0.4,0.8,0.2,0.2,0.8,0.3,0.7), dim = c(2,2,2), 
+                     dimnames = list(Risk_2 = Risk_2.lv,
+                                     Budget = Budget.lv,
+                                     Risk_1 = Risk_1.lv
+                                     ))
+
+Risk_3.prob <- array(c(0.5,0.5,0.9,0.1,0.1,0.9,0.4,0.6), dim = c(2,2,2), 
+                     dimnames = list(Risk_3 = Risk_3.lv,
+                                     Complexity = Complexity.lv,
+                                     Risk_2 = Risk_2.lv
+                                     ))
+
+Project_Risk.prob <- array(c(0.05,0.1,0.85,
+                             0.3,0.4,0.3,
+                             0.1,0.2,0.7,
+                             0.5,0.3,0.2,
+                             0.1,0.3,0.6,
+                             0.5,0.4,0.1,
+                             0.3,0.4,0.3,
+                             0.85,0.1,0.05), dim = c(3,2,2,2), 
+                     dimnames = list(Project_Risk = Project_Risk.lv,
+                                     Risk_3 = Risk_3.lv,
+                                     Risk_2 = Risk_2.lv,
+                                     Risk_1 = Risk_1.lv
+                                     ))
+
+Overrun.prob <- array(c(0.95,0.05,
+                        0.90,0.10,
+                        0.80,0.20,
+                        0.75,0.25,
+                        0.60,0.40,
+                        0.55,0.45,
+                        0.45,0.55,
+                        0.40,0.60,
+                        0.25,0.75,
+                        0.20,0.80,
+                        0.10,0.90,
+                        0.05,0.95), dim = c(2,2,2,3), 
+                     dimnames = list(Overrun = Overrun.lv,
+                                     Type = Type.lv,
+                                     Complexity = Complexity.lv,
+                                     Project_Risk = Project_Risk.lv
+                                     ))
+```
+
+Create the fitted BN
+```{r}
+cpt <- list(Schedule=Schedule.prob,
+            Budget=Budget.prob,
+            Complexity=Complexity.prob,
+            Type=Type.prob,
+            Risk_1=Risk_1.prob,
+            Risk_2=Risk_2.prob,
+            Risk_3=Risk_3.prob,
+            Project_Risk=Project_Risk.prob,
+            Overrun=Overrun.prob)
+
+bn <- custom.fit(dag,cpt)
+write.net("/prm/prm.net",bn)
+```
+
+Create the data
+```{r}
+set.seed(1)
+df <- rbn(bn, 100000)
+write.csv(df, "/prm/prm.csv", row.names=FALSE)
+df[sapply(df, is.character)] <- lapply(df[sapply(df, is.character)], 
+                                       as.factor)
+test_data <- rbn(bn, 1000)
+write.csv(test_data, "/prm/test.csv", row.names=FALSE)
+summary(df)
+```
+
+Original BN
+```{r}
+original = dag
+score(original, df, type = "bic")
+fitted_original = bn
+```
+
+sample 1000 data points
+```{r}
+set.seed(1)
+stratified_1000 <- df %>%
+  group_by(Type) %>%
+  sample_frac(size=0.01)
+stratified_1000 <- as.data.frame(stratified_1000)
+summary(stratified_1000)
+write.csv(stratified_1000, "/prm/Samples/stratified_1000.csv", row.names=FALSE)
+```
+
+sample 500 data points
+```{r}
+set.seed(1)
+stratified_500 <- stratified_1000 %>%
+  group_by(Type) %>%
+  sample_frac(size=0.5)
+stratified_500 <- as.data.frame(stratified_500)
+summary(stratified_500)
+write.csv(stratified_500, "/prm/Samples/stratified_500.csv", row.names=FALSE)
+```
+
+sample 100 data points
+```{r}
+set.seed(1)
+stratified_100 <- stratified_500 %>%
+  group_by(Type) %>%
+  sample_frac(size=0.2)
+stratified_100 <- as.data.frame(stratified_100)
+summary(stratified_100)
+write.csv(stratified_100, "/prm/Samples/stratified_100.csv", row.names=FALSE)
+```
+
+Learn the BN structure with full data
+```{r}
+BN_full <- tabu(df)
+fitted_full = bn.fit(original, df, method = "bayes")
+graphviz.plot(BN_full, shape = "ellipse")
+
+distance <- shd(original, BN_full, debug = TRUE)
+bayes_factor <- BF(original, BN_full, df, score = "bds")
+bics <- score(BN_full, df, type = "bic")
+
+kullback <- KL(fitted_original, fitted_full)
+```
+
+Learn the BN structure with 100 data points
+```{r}
+BN_100 <- tabu(stratified_100)
+fitted_100 <- bn.fit(original, stratified_100, method = "bayes")
+graphviz.plot(BN_100, shape = "ellipse")
+
+distance <- c(distance,shd(original, BN_100, debug = TRUE))
+bayes_factor <- c(bayes_factor,BF(original, BN_100, df, score = "bds"))
+bics <- c(bics,score(BN_100, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_100))
+```
+
+Learn the BN structure with 500 data points
+```{r}
+BN_500 <- tabu(stratified_500)
+fitted_500 <- bn.fit(original, stratified_500, method = "bayes")
+graphviz.plot(BN_500, shape = "ellipse")
+
+distance <- c(distance,shd(original, BN_500, debug = TRUE))
+bayes_factor <- c(bayes_factor,BF(original, BN_500, df, score = "bds"))
+bics <- c(bics,score(BN_500, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_500))
+```
+
+
+Learn the BN structure with 1,000 data points
+```{r}
+BN_1000 <- tabu(stratified_1000)
+fitted_1000 <- bn.fit(original, stratified_1000, method = "bayes")
+graphviz.plot(BN_1000, shape = "ellipse")
+
+distance <- c(distance,shd(original, BN_1000, debug = TRUE))
+bayes_factor <- c(bayes_factor,BF(original, BN_1000, df, score = "bds"))
+bics <- c(bics,score(BN_1000, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_1000))
+```
+
+
+# Metrics
+```{r}
+matrix_empty <- matrix(nrow = 4, ncol = 1)
+metrics_table = data.frame(matrix_empty) 
+metrics_table$bics <- bics
+metrics_table$bf <- bayes_factor
+metrics_table$shd <- distance
+metrics_table$kullback <- kullback
+metrics_table <- metrics_table[,-c(1)]
+row.names(metrics_table) <- c("Full", "Sample100", "Sample500", "Sample1000")
+metrics_table
+```
+
+
+Calculate the MAP for Project Risk with stratified_100
+```{r}
+fitted_bn_100 <- bn.fit(BN_100, stratified_100, method = "bayes")
+predicted_100 = predict(fitted_bn_100, node = "Overrun", data = test_data)
+accuracy(test_data$Overrun, predicted_100)
+```
+
+Calculate the MAP for Project Risk with stratified_500
+```{r}
+fitted_bn_500 <- bn.fit(BN_500, stratified_500, method = "bayes")
+predicted_500 = predict(fitted_bn_500, node = "Overrun", data = test_data)
+accuracy(test_data$Overrun, predicted_500)
+```
+
+Calculate the MAP for Project Risk with stratified_1000
+```{r}
+fitted_bn_1000 <- bn.fit(BN_1000, stratified_1000, method = "bayes")
+predicted_1000 = predict(fitted_bn_1000, node = "Overrun", data = test_data)
+accuracy(test_data$Overrun, predicted_1000)
+```

@@ -1,0 +1,75 @@
+net 
+{ 
+}
+node Schedule 
+{
+  states = ( "short" "large" );
+}
+node Budget 
+{
+  states = ( "small" "large" );
+}
+node Risk_1 
+{
+  states = ( "yes" "no" );
+}
+node Risk_2 
+{
+  states = ( "yes" "no" );
+}
+node Risk_3 
+{
+  states = ( "yes" "no" );
+}
+node Project_Risk 
+{
+  states = ( "low" "medium" "high" );
+}
+node Complexity 
+{
+  states = ( "easy" "hard" );
+}
+node Type 
+{
+  states = ( "A" "B" );
+}
+node Overrun 
+{
+  states = ( "acceptable" "unacceptable" );
+}
+potential ( Schedule ) 
+{
+  data = ( 0.78 0.22 );
+}
+potential ( Budget ) 
+{
+  data = ( 0.67 0.33 );
+}
+potential ( Risk_1 | Schedule ) 
+{
+  data = ((0.6 0.4)(0.5 0.5)) ;
+}
+potential ( Risk_2 | Budget Risk_1 ) 
+{
+  data = (((0.6 0.4)(0.2 0.8))((0.8 0.2)(0.3 0.7))) ;
+}
+potential ( Risk_3 | Risk_2 Complexity ) 
+{
+  data = (((0.5 0.5)(0.9 0.1))((0.1 0.9)(0.4 0.6))) ;
+}
+potential ( Project_Risk | Risk_1 Risk_2 Risk_3 ) 
+{
+  data = ((((0.05 0.10 0.85)(0.3 0.4 0.3))((0.1 0.2 0.7)(0.5 0.3 0.2)))(((0.1 0.3 0.6)(0.5 0.4 0.1))((0.3 0.4 0.3)(0.85 0.10 0.05)))) ;
+}
+potential ( Complexity ) 
+{
+  data = ( 0.8 0.2 );
+}
+potential ( Type ) 
+{
+  data = ( 0.9 0.1 );
+}
+potential ( Overrun | Project_Risk Complexity Type ) 
+{
+  data = ((((0.95 0.05)(0.9 0.1))((0.8 0.2)(0.75 0.25)))(((0.6 0.4)(0.55 0.45))((0.45 0.55)(0.4 0.6)))(((0.25 0.75)(0.2 0.8))((0.1 0.9)(0.05 0.95)))) ;
+}
