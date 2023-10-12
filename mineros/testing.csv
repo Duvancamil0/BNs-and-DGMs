@@ -1,0 +1,10 @@
+ID,Category_Time,Category_Overrun,Category_Cost,International_Project,Labor_Risk,Analysis_Risk,Decision_Risk,Engineering_Risk,Provider._Risk,Weather_Risk,Fabrication._Risk
+127,Medium,Very Large,Medium,0,0,0,0,1,0,1,1
+132,Small,Very Large,Medium,0,0,0,1,1,0,0,1
+140,Small,Very Large,Medium,0,0,1,0,0,1,0,1
+154,Small,Very Large,Medium,0,0,0,1,0,0,0,1
+183,Small,Large,Medium,0,0,0,1,0,1,0,0
+041,Medium,Medium,Medium,0,1,1,0,0,0,1,0
+043,Small,Very Large,Medium,0,0,0,0,1,0,1,1
+073,Small,Very Large,Big,1,0,0,0,1,0,0,1
+118,Medium,Small,Medium,1,1,0,0,0,0,0,0

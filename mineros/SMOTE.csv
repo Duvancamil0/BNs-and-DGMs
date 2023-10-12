@@ -1,0 +1,501 @@
+,Category_Time,Category_Cost,International_Project,Labor_Risk,Analysis_Risk,Decision_Risk,Engineering_Risk,Provider._Risk,Weather_Risk,Fabrication._Risk,Category_Overrun
+0,Medium,Big,1,0,0,0,1,1,0,1,Very Large
+1,Small,Small,0,0,1,0,0,0,0,0,Very Large
+2,Large,Big,0,0,0,0,0,0,0,0,Minimal
+3,Medium,Medium,0,0,0,0,0,0,0,1,Very Large
+4,Medium,Medium,0,1,0,0,1,0,0,0,Large
+5,Medium,Big,1,0,0,1,0,0,1,0,Very Large
+6,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+7,Large,Medium,0,0,0,1,1,0,0,1,Medium
+8,Medium,Big,1,0,0,0,1,1,0,0,Medium
+9,Small,Big,1,0,0,0,1,0,0,1,Very Large
+10,Small,Small,0,0,0,0,0,0,0,0,Small
+11,Medium,Medium,0,1,0,1,0,0,0,1,Large
+12,Small,Medium,0,0,0,0,0,0,0,1,Medium
+13,Large,Big,0,1,0,0,1,0,0,1,Large
+14,Medium,Medium,0,0,0,0,0,0,0,0,Minimal
+15,Large,Big,0,0,0,0,0,1,0,1,Small
+16,Small,Big,0,0,0,0,0,0,0,0,Minimal
+17,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+18,Medium,Big,0,0,1,1,0,0,0,1,Very Large
+19,Small,Small,0,0,0,0,0,0,0,1,Very Large
+20,Small,Small,0,0,1,1,0,0,0,0,Very Large
+21,Large,Medium,0,0,0,0,0,0,0,1,Medium
+22,Small,Medium,0,0,0,0,0,1,0,0,Medium
+23,Large,Small,0,0,0,0,0,0,0,0,Minimal
+24,Small,Medium,0,0,0,1,0,0,0,0,Medium
+25,Medium,Medium,0,0,0,0,1,0,0,1,Large
+26,Small,Big,1,0,0,0,0,0,0,0,Minimal
+27,Medium,Big,1,0,0,0,0,1,0,1,Medium
+28,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+29,Medium,Medium,0,0,0,1,1,0,0,1,Very Large
+30,Small,Small,0,0,0,0,1,0,0,1,Very Large
+31,Medium,Big,0,0,0,0,1,1,0,1,Very Large
+32,Medium,Medium,0,1,0,1,0,0,0,1,Very Large
+33,Small,Small,0,1,0,0,0,0,0,1,Very Large
+34,Large,Big,0,1,0,0,0,1,0,1,Small
+35,Large,Medium,0,0,0,0,0,0,0,0,Minimal
+36,Large,Big,0,0,0,0,0,0,0,0,Minimal
+37,Medium,Medium,0,0,0,1,0,1,0,1,Very Large
+38,Small,Medium,0,0,0,0,1,1,1,0,Very Large
+39,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+40,Small,Small,0,0,0,0,1,0,0,1,Small
+41,Medium,Medium,0,0,1,1,1,0,0,0,Very Large
+42,Small,Small,0,1,1,1,0,0,0,0,Very Large
+43,Medium,Big,1,0,0,0,0,1,0,0,Small
+44,Small,Medium,0,0,0,1,0,0,0,0,Large
+45,Medium,Medium,0,0,0,1,0,0,0,1,Large
+46,Medium,Medium,0,0,0,0,0,1,0,0,Very Large
+47,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+48,Small,Small,0,0,0,0,1,0,0,0,Medium
+49,Small,Small,0,0,0,1,0,0,0,0,Large
+50,Small,Medium,0,0,0,0,0,1,0,0,Large
+51,Medium,Big,1,0,0,0,0,0,1,0,Small
+52,Medium,Big,1,0,0,0,1,1,0,1,Very Large
+53,Medium,Big,1,0,0,0,1,1,1,0,Very Large
+54,Medium,Big,1,0,0,0,1,0,0,1,Very Large
+55,Large,Big,0,0,0,1,1,1,0,0,Medium
+56,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+57,Medium,Medium,0,1,0,0,1,0,0,0,Large
+58,Small,Small,0,0,1,0,1,0,0,0,Large
+59,Medium,Small,0,0,0,0,0,0,0,0,Small
+60,Medium,Big,1,1,0,1,0,0,0,1,Very Large
+61,Medium,Medium,0,0,1,1,0,1,0,0,Medium
+62,Large,Medium,0,0,1,1,0,0,0,0,Small
+63,Medium,Medium,0,1,0,1,0,0,0,0,Small
+64,Small,Medium,0,0,0,0,1,1,0,0,Large
+65,Small,Medium,0,0,0,0,1,1,0,1,Very Large
+66,Small,Medium,0,0,0,0,0,1,0,0,Medium
+67,Small,Medium,0,0,0,1,0,1,0,1,Very Large
+68,Small,Big,0,0,0,1,1,0,0,0,Very Large
+69,Small,Medium,0,0,0,0,1,0,0,1,Very Large
+70,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+71,Medium,Medium,0,0,0,0,1,0,1,0,Very Large
+72,Large,Big,0,0,0,0,0,1,0,1,Large
+73,Large,Small,0,0,0,0,0,0,0,0,Small
+74,Small,Medium,0,1,0,1,0,1,0,0,Large
+75,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+76,Large,Big,0,0,0,0,0,1,0,1,Very Large
+77,Medium,Medium,0,0,0,0,1,1,0,0,Large
+78,Medium,Medium,0,0,0,1,0,0,0,0,Large
+79,Small,Medium,0,0,0,0,0,0,0,0,Large
+80,Small,Medium,0,0,0,1,0,0,0,0,Large
+81,Medium,Medium,0,0,0,0,1,0,0,0,Large
+82,Medium,Medium,0,0,0,0,1,0,0,0,Large
+83,Small,Medium,0,0,0,0,0,0,0,0,Large
+84,Medium,Medium,0,0,0,1,0,0,0,0,Large
+85,Medium,Medium,0,0,0,0,1,0,0,0,Large
+86,Medium,Medium,0,0,0,0,1,0,0,0,Large
+87,Medium,Medium,0,1,0,1,0,0,0,0,Large
+88,Small,Medium,0,0,0,1,0,0,0,0,Large
+89,Small,Medium,0,0,0,0,0,1,0,0,Large
+90,Medium,Medium,0,0,0,0,1,0,0,0,Large
+91,Small,Medium,0,0,0,1,0,0,0,0,Large
+92,Small,Medium,0,0,0,1,0,0,0,0,Large
+93,Medium,Medium,0,0,0,0,1,0,0,0,Large
+94,Medium,Medium,0,1,0,0,1,0,0,1,Large
+95,Small,Medium,0,0,0,1,0,0,0,0,Large
+96,Medium,Medium,0,0,0,1,0,0,0,0,Large
+97,Medium,Medium,0,1,0,0,1,0,0,1,Large
+98,Small,Medium,0,0,0,1,0,0,0,0,Large
+99,Small,Medium,0,0,0,0,0,0,0,0,Large
+100,Small,Medium,0,0,0,1,0,0,0,0,Large
+101,Medium,Medium,0,0,0,0,1,0,0,0,Large
+102,Small,Medium,0,0,0,1,0,0,0,0,Large
+103,Medium,Medium,0,0,0,0,1,0,0,0,Large
+104,Medium,Medium,0,1,0,0,1,0,0,1,Large
+105,Small,Medium,0,0,0,1,0,0,0,0,Large
+106,Small,Medium,0,0,0,0,0,1,0,0,Large
+107,Small,Medium,0,0,0,0,0,1,0,0,Large
+108,Medium,Medium,0,0,0,0,1,0,0,0,Large
+109,Medium,Medium,0,1,0,1,0,0,0,0,Large
+110,Small,Medium,0,0,0,0,0,1,0,0,Large
+111,Medium,Medium,0,0,0,0,1,0,0,0,Large
+112,Small,Medium,0,0,0,1,0,0,0,0,Large
+113,Medium,Medium,0,0,0,0,1,0,0,0,Large
+114,Medium,Medium,0,0,0,0,1,0,0,0,Large
+115,Medium,Medium,0,0,0,0,1,0,0,0,Large
+116,Small,Medium,0,0,0,0,0,1,0,0,Large
+117,Medium,Medium,0,0,0,0,1,0,0,0,Large
+118,Small,Medium,0,0,0,1,0,0,0,0,Large
+119,Medium,Medium,0,0,0,0,1,0,0,0,Large
+120,Medium,Medium,0,1,0,1,0,0,0,0,Large
+121,Medium,Medium,0,0,0,0,1,0,0,0,Large
+122,Small,Medium,0,0,0,1,0,0,0,0,Large
+123,Medium,Medium,0,1,0,1,0,0,0,0,Large
+124,Medium,Medium,0,0,0,0,1,0,0,0,Large
+125,Medium,Medium,0,0,0,0,1,0,0,0,Large
+126,Medium,Medium,0,0,0,0,1,0,0,0,Large
+127,Medium,Medium,0,0,0,0,1,0,0,0,Large
+128,Medium,Medium,0,0,0,0,1,0,0,0,Large
+129,Medium,Medium,0,0,0,0,1,0,0,0,Large
+130,Medium,Medium,0,0,0,0,1,0,0,0,Large
+131,Small,Medium,0,0,0,0,0,1,0,0,Large
+132,Medium,Medium,0,0,0,0,1,0,0,0,Large
+133,Small,Medium,0,0,0,1,0,0,0,0,Large
+134,Medium,Medium,0,0,0,1,0,0,0,0,Large
+135,Medium,Medium,0,1,0,1,0,0,0,0,Large
+136,Medium,Medium,0,0,0,0,1,0,0,0,Large
+137,Medium,Medium,0,0,0,0,1,0,0,0,Large
+138,Small,Medium,0,0,0,1,0,0,0,0,Large
+139,Medium,Medium,0,0,0,0,1,0,0,0,Large
+140,Medium,Medium,0,1,0,1,0,0,0,0,Large
+141,Small,Medium,0,0,0,0,0,0,0,0,Large
+142,Small,Medium,0,0,0,1,0,0,0,0,Large
+143,Medium,Medium,0,0,0,0,1,0,0,0,Large
+144,Small,Medium,0,0,0,1,0,0,0,0,Large
+145,Medium,Medium,0,0,0,0,1,0,0,0,Large
+146,Medium,Medium,0,0,0,0,1,0,0,0,Large
+147,Medium,Medium,0,0,0,0,1,0,0,0,Large
+148,Medium,Medium,0,0,0,0,1,0,0,0,Large
+149,Medium,Medium,0,1,0,0,1,0,0,1,Large
+150,Medium,Medium,0,0,0,0,1,0,0,0,Large
+151,Small,Medium,0,0,0,1,0,0,0,0,Large
+152,Medium,Medium,0,0,0,0,1,0,0,0,Large
+153,Medium,Medium,0,1,0,0,1,0,0,1,Large
+154,Small,Medium,0,0,0,0,0,1,0,0,Large
+155,Small,Medium,0,0,0,0,0,1,0,0,Large
+156,Medium,Medium,0,0,0,0,1,0,0,0,Large
+157,Medium,Medium,0,0,0,0,1,0,0,0,Large
+158,Medium,Medium,0,0,0,0,1,0,0,0,Large
+159,Small,Medium,0,0,0,1,0,0,0,0,Large
+160,Medium,Medium,0,0,0,0,1,0,0,0,Large
+161,Medium,Medium,0,0,0,0,1,0,0,0,Large
+162,Small,Medium,0,0,0,0,0,1,0,0,Large
+163,Small,Medium,0,0,0,0,0,1,0,0,Large
+164,Small,Medium,0,0,0,0,0,1,0,0,Medium
+165,Small,Medium,0,0,0,0,0,1,0,0,Medium
+166,Large,Medium,0,0,0,0,1,0,0,0,Medium
+167,Small,Medium,0,0,0,0,0,1,0,0,Medium
+168,Small,Medium,0,0,0,0,0,1,0,0,Medium
+169,Small,Medium,0,0,0,0,0,1,0,0,Medium
+170,Large,Medium,0,0,0,0,0,0,0,0,Medium
+171,Large,Medium,0,0,0,0,0,0,0,0,Medium
+172,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+173,Small,Medium,0,0,0,0,0,1,0,0,Medium
+174,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+175,Small,Medium,0,0,0,0,0,1,0,0,Medium
+176,Small,Medium,0,0,0,0,0,0,0,0,Medium
+177,Small,Medium,0,0,0,0,0,1,0,0,Medium
+178,Small,Medium,0,0,0,0,0,1,0,0,Medium
+179,Small,Medium,0,0,0,0,0,0,0,0,Medium
+180,Small,Medium,0,0,0,0,0,1,0,0,Medium
+181,Small,Medium,0,0,0,0,0,1,0,0,Medium
+182,Small,Medium,0,0,0,0,0,1,0,0,Medium
+183,Small,Medium,0,0,0,0,0,0,0,0,Medium
+184,Small,Medium,0,0,0,0,0,1,0,0,Medium
+185,Small,Medium,0,0,0,0,0,1,0,0,Medium
+186,Small,Medium,0,0,0,0,0,1,0,0,Medium
+187,Small,Medium,0,0,0,0,0,1,0,0,Medium
+188,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+189,Small,Medium,0,0,0,0,0,1,0,0,Medium
+190,Large,Medium,0,0,0,0,0,0,0,0,Medium
+191,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+192,Small,Medium,0,0,0,0,0,1,0,0,Medium
+193,Small,Medium,0,0,0,0,0,1,0,0,Medium
+194,Small,Medium,0,0,0,0,0,1,0,0,Medium
+195,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+196,Small,Medium,0,0,0,0,0,1,0,0,Medium
+197,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+198,Large,Medium,0,0,0,0,0,0,0,0,Medium
+199,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+200,Large,Medium,0,0,0,0,1,0,0,0,Medium
+201,Large,Medium,0,0,0,0,1,0,0,0,Medium
+202,Small,Medium,0,0,0,0,0,0,0,0,Medium
+203,Small,Medium,0,0,0,0,0,1,0,0,Medium
+204,Small,Medium,0,0,0,0,0,1,0,0,Medium
+205,Large,Medium,0,0,0,0,1,0,0,0,Medium
+206,Small,Medium,0,0,0,0,0,1,0,0,Medium
+207,Small,Medium,0,0,0,0,0,0,0,0,Medium
+208,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+209,Small,Medium,0,0,0,0,0,1,0,0,Medium
+210,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+211,Small,Medium,0,0,0,0,0,1,0,0,Medium
+212,Small,Medium,0,0,0,0,0,0,0,0,Medium
+213,Small,Medium,0,0,0,0,0,1,0,0,Medium
+214,Large,Medium,0,0,0,0,1,0,0,0,Medium
+215,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+216,Small,Medium,0,0,0,0,0,1,0,0,Medium
+217,Small,Medium,0,0,0,0,0,1,0,0,Medium
+218,Small,Medium,0,0,0,0,0,1,0,0,Medium
+219,Large,Medium,0,0,0,0,0,0,0,0,Medium
+220,Small,Medium,0,0,0,0,0,0,0,0,Medium
+221,Small,Medium,0,0,0,0,0,1,0,0,Medium
+222,Small,Medium,0,0,0,0,0,0,0,0,Medium
+223,Large,Medium,0,0,0,0,0,0,0,0,Medium
+224,Small,Medium,0,0,0,0,0,1,0,0,Medium
+225,Small,Medium,0,0,0,0,0,1,0,0,Medium
+226,Small,Medium,0,0,0,0,0,0,0,0,Medium
+227,Small,Medium,0,0,0,0,0,1,0,0,Medium
+228,Small,Medium,0,0,0,0,0,1,0,0,Medium
+229,Small,Medium,0,0,0,0,0,1,0,0,Medium
+230,Small,Medium,0,0,0,0,0,1,0,0,Medium
+231,Large,Medium,0,0,0,0,1,0,0,0,Medium
+232,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+233,Small,Medium,0,0,0,0,0,1,0,0,Medium
+234,Small,Medium,0,0,0,0,0,0,0,0,Medium
+235,Small,Medium,0,0,0,0,0,1,0,0,Medium
+236,Small,Medium,0,0,0,0,0,1,0,0,Medium
+237,Small,Medium,0,0,0,0,0,1,0,0,Medium
+238,Small,Medium,0,0,0,0,0,1,0,0,Medium
+239,Small,Medium,0,0,0,0,0,1,0,0,Medium
+240,Small,Medium,0,0,0,0,0,1,0,0,Medium
+241,Small,Medium,0,0,0,0,0,0,0,0,Medium
+242,Medium,Medium,0,0,0,0,0,1,0,0,Medium
+243,Large,Medium,0,0,0,0,1,0,0,0,Medium
+244,Large,Medium,0,0,0,0,0,0,0,0,Medium
+245,Small,Medium,0,0,0,0,0,0,0,0,Medium
+246,Small,Medium,0,0,0,0,0,1,0,0,Medium
+247,Small,Medium,0,0,0,0,0,1,0,0,Medium
+248,Small,Medium,0,0,0,0,0,1,0,0,Medium
+249,Small,Medium,0,0,0,0,0,1,0,0,Medium
+250,Small,Medium,0,0,0,0,0,1,0,0,Medium
+251,Small,Medium,0,0,0,0,0,0,0,0,Medium
+252,Large,Big,0,0,0,0,0,0,0,0,Minimal
+253,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+254,Large,Big,0,0,0,0,0,0,0,0,Minimal
+255,Large,Big,0,0,0,0,0,0,0,0,Minimal
+256,Large,Big,0,0,0,0,0,0,0,0,Minimal
+257,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+258,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+259,Large,Big,0,0,0,0,0,0,0,0,Minimal
+260,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+261,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+262,Large,Big,0,0,0,0,0,0,0,0,Minimal
+263,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+264,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+265,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+266,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+267,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+268,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+269,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+270,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+271,Large,Big,0,0,0,0,0,0,0,0,Minimal
+272,Large,Big,0,0,0,0,0,0,0,0,Minimal
+273,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+274,Large,Big,0,0,0,0,0,0,0,0,Minimal
+275,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+276,Large,Big,0,0,0,0,0,0,0,0,Minimal
+277,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+278,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+279,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+280,Large,Big,0,0,0,0,0,0,0,0,Minimal
+281,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+282,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+283,Large,Big,0,0,0,0,0,0,0,0,Minimal
+284,Large,Big,0,0,0,0,0,0,0,0,Minimal
+285,Large,Big,0,0,0,0,0,0,0,0,Minimal
+286,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+287,Large,Big,0,0,0,0,0,0,0,0,Minimal
+288,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+289,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+290,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+291,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+292,Large,Big,0,0,0,0,0,0,0,0,Minimal
+293,Large,Big,0,0,0,0,0,0,0,0,Minimal
+294,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+295,Large,Big,0,0,0,0,0,0,0,0,Minimal
+296,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+297,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+298,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+299,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+300,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+301,Large,Big,0,0,0,0,0,0,0,0,Minimal
+302,Large,Big,0,0,0,0,0,0,0,0,Minimal
+303,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+304,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+305,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+306,Large,Big,0,0,0,0,0,0,0,0,Minimal
+307,Large,Big,0,0,0,0,0,0,0,0,Minimal
+308,Large,Big,0,0,0,0,0,0,0,0,Minimal
+309,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+310,Large,Big,0,0,0,0,0,0,0,0,Minimal
+311,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+312,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+313,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+314,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+315,Large,Big,0,0,0,0,0,0,0,0,Minimal
+316,Large,Big,0,0,0,0,0,0,0,0,Minimal
+317,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+318,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+319,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+320,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+321,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+322,Large,Big,0,0,0,0,0,0,0,0,Minimal
+323,Large,Big,0,0,0,0,0,0,0,0,Minimal
+324,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+325,Large,Big,0,0,0,0,0,0,0,0,Minimal
+326,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+327,Large,Big,0,0,0,0,0,0,0,0,Minimal
+328,Large,Big,0,0,0,0,0,0,0,0,Minimal
+329,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+330,Large,Big,0,0,0,0,0,0,0,0,Minimal
+331,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+332,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+333,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+334,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+335,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+336,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+337,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+338,Large,Big,0,0,0,0,0,0,0,0,Minimal
+339,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+340,Large,Big,0,0,0,0,0,0,0,0,Minimal
+341,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+342,Medium,Big,0,0,0,0,0,0,0,0,Minimal
+343,Medium,Small,0,0,0,0,0,0,0,0,Small
+344,Medium,Small,0,0,0,0,0,0,0,0,Small
+345,Large,Small,0,0,0,0,0,0,0,0,Small
+346,Medium,Small,0,0,0,0,0,0,0,0,Small
+347,Medium,Small,0,0,0,0,0,0,0,0,Small
+348,Medium,Small,0,0,0,0,0,0,0,0,Small
+349,Large,Big,0,0,0,0,0,0,0,0,Small
+350,Large,Small,0,0,0,0,0,0,0,0,Small
+351,Medium,Small,0,0,0,0,0,0,0,0,Small
+352,Large,Small,0,0,0,0,0,0,0,0,Small
+353,Large,Big,0,0,0,0,0,0,0,0,Small
+354,Medium,Small,0,0,0,0,0,0,0,0,Small
+355,Medium,Small,0,0,0,0,0,0,0,0,Small
+356,Large,Big,0,0,0,0,0,0,0,0,Small
+357,Medium,Small,0,0,0,0,0,0,0,0,Small
+358,Large,Big,0,0,0,0,0,0,0,0,Small
+359,Medium,Small,0,0,0,0,0,0,0,0,Small
+360,Large,Small,0,0,0,0,0,0,0,0,Small
+361,Large,Small,0,0,0,0,0,0,0,0,Small
+362,Large,Small,0,0,0,0,0,0,0,0,Small
+363,Large,Big,0,0,0,0,0,0,0,0,Small
+364,Large,Small,0,0,0,0,0,0,0,0,Small
+365,Medium,Small,0,0,0,0,0,0,0,0,Small
+366,Medium,Small,0,0,0,0,0,0,0,0,Small
+367,Large,Small,0,0,0,0,0,0,0,0,Small
+368,Large,Small,0,0,0,0,0,0,0,0,Small
+369,Large,Small,0,0,0,0,0,0,0,0,Small
+370,Medium,Small,0,0,0,0,0,0,0,0,Small
+371,Large,Small,0,0,0,0,0,0,0,0,Small
+372,Large,Big,0,0,0,0,0,0,0,0,Small
+373,Medium,Small,0,0,0,0,0,0,0,0,Small
+374,Large,Big,0,0,0,0,0,0,0,0,Small
+375,Medium,Small,0,0,0,0,0,0,0,0,Small
+376,Medium,Small,0,0,0,0,0,0,0,0,Small
+377,Large,Small,0,0,0,0,0,0,0,0,Small
+378,Large,Small,0,0,0,0,0,0,0,0,Small
+379,Medium,Small,0,0,0,0,0,0,0,0,Small
+380,Large,Small,0,0,0,0,0,0,0,0,Small
+381,Large,Small,0,0,0,0,0,0,0,0,Small
+382,Medium,Small,0,0,0,0,0,0,0,0,Small
+383,Medium,Small,0,0,0,0,0,0,0,0,Small
+384,Large,Big,0,0,0,0,0,0,0,0,Small
+385,Large,Small,0,0,0,0,0,0,0,0,Small
+386,Large,Small,0,0,0,0,0,0,0,0,Small
+387,Medium,Small,0,0,0,0,0,0,0,0,Small
+388,Medium,Small,0,0,0,0,0,0,0,0,Small
+389,Large,Big,0,0,0,0,0,0,0,0,Small
+390,Medium,Small,0,0,0,0,0,0,0,0,Small
+391,Medium,Small,0,0,0,0,0,0,0,0,Small
+392,Large,Small,0,0,0,0,0,0,0,0,Small
+393,Large,Small,0,0,0,0,0,0,0,0,Small
+394,Large,Big,0,0,0,0,0,0,0,0,Small
+395,Medium,Small,0,0,0,0,0,0,0,0,Small
+396,Medium,Small,0,0,0,0,0,0,0,0,Small
+397,Large,Small,0,0,0,0,0,0,0,0,Small
+398,Large,Big,0,0,0,0,0,0,0,0,Small
+399,Large,Small,0,0,0,0,0,0,0,0,Small
+400,Large,Small,0,0,0,0,0,0,0,0,Small
+401,Large,Small,0,0,0,0,0,0,0,0,Small
+402,Medium,Small,0,0,0,0,0,0,0,0,Small
+403,Medium,Small,0,0,0,0,0,0,0,0,Small
+404,Large,Small,0,0,0,0,0,0,0,0,Small
+405,Large,Small,0,0,0,0,0,0,0,0,Small
+406,Large,Small,0,0,0,0,0,0,0,0,Small
+407,Large,Small,0,0,0,0,0,0,0,0,Small
+408,Medium,Small,0,0,0,0,0,0,0,0,Small
+409,Medium,Small,0,0,0,0,0,0,0,0,Small
+410,Large,Small,0,0,0,0,0,0,0,0,Small
+411,Large,Small,0,0,0,0,0,0,0,0,Small
+412,Medium,Small,0,0,0,0,0,0,0,0,Small
+413,Medium,Small,0,0,0,0,0,0,0,0,Small
+414,Medium,Small,0,0,0,0,0,0,0,0,Small
+415,Large,Big,0,0,0,0,0,0,0,0,Small
+416,Large,Small,0,0,0,0,0,0,0,0,Small
+417,Large,Small,0,0,0,0,0,0,0,0,Small
+418,Large,Small,0,0,0,0,0,0,0,0,Small
+419,Large,Small,0,0,0,0,0,0,0,0,Small
+420,Large,Small,0,0,0,0,0,0,0,0,Small
+421,Medium,Small,0,0,0,0,0,0,0,0,Small
+422,Medium,Small,0,0,0,0,0,0,0,0,Small
+423,Large,Small,0,0,0,0,0,0,0,0,Small
+424,Large,Small,0,0,0,0,0,0,0,0,Small
+425,Large,Big,0,0,0,0,0,0,0,0,Small
+426,Large,Big,0,0,0,0,0,0,0,0,Small
+427,Large,Small,0,0,0,0,0,0,0,0,Small
+428,Medium,Small,0,0,0,0,0,0,0,0,Small
+429,Medium,Small,0,0,0,0,0,0,0,0,Small
+430,Medium,Small,0,0,0,0,0,0,0,0,Small
+431,Medium,Small,0,0,0,0,0,0,0,0,Small
+432,Medium,Small,0,0,0,0,0,0,0,0,Small
+433,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+434,Small,Small,0,0,0,0,0,0,0,1,Very Large
+435,Small,Small,0,0,1,0,0,0,0,0,Very Large
+436,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+437,Medium,Big,1,0,0,0,1,0,0,1,Very Large
+438,Medium,Small,0,1,0,0,0,0,0,1,Very Large
+439,Medium,Big,1,0,0,0,1,1,0,1,Very Large
+440,Medium,Medium,0,0,0,0,0,0,0,1,Very Large
+441,Small,Small,0,0,1,0,0,0,0,0,Very Large
+442,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+443,Medium,Medium,0,0,0,1,0,0,0,1,Very Large
+444,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+445,Medium,Small,0,1,0,1,0,0,0,1,Very Large
+446,Medium,Medium,0,0,0,0,0,1,0,0,Very Large
+447,Medium,Medium,0,0,0,0,1,0,0,0,Very Large
+448,Medium,Medium,0,0,0,0,0,1,0,0,Very Large
+449,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+450,Medium,Medium,0,0,0,0,1,0,0,0,Very Large
+451,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+452,Medium,Medium,0,0,0,1,0,0,0,1,Very Large
+453,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+454,Medium,Big,1,0,0,0,1,0,0,1,Very Large
+455,Medium,Big,1,0,0,0,1,0,0,1,Very Large
+456,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+457,Medium,Medium,0,0,0,0,0,0,0,1,Very Large
+458,Medium,Big,1,0,0,0,1,1,1,0,Very Large
+459,Medium,Big,0,0,0,0,1,1,0,1,Very Large
+460,Small,Small,0,0,1,0,0,0,0,0,Very Large
+461,Medium,Medium,0,0,0,1,0,0,0,1,Very Large
+462,Medium,Big,1,0,0,0,1,1,1,0,Very Large
+463,Small,Small,0,0,1,0,0,0,0,0,Very Large
+464,Medium,Big,1,0,0,0,1,1,0,1,Very Large
+465,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+466,Small,Small,0,0,0,0,0,0,0,1,Very Large
+467,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+468,Medium,Big,0,0,0,0,1,1,0,1,Very Large
+469,Small,Small,0,0,0,0,0,0,0,1,Very Large
+470,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+471,Medium,Medium,0,0,0,1,0,0,0,1,Very Large
+472,Medium,Big,0,0,0,0,0,0,1,0,Very Large
+473,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+474,Medium,Big,1,0,0,0,1,1,0,1,Very Large
+475,Medium,Big,0,0,0,0,0,0,1,0,Very Large
+476,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+477,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+478,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+479,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+480,Medium,Medium,0,0,0,0,0,0,0,1,Very Large
+481,Medium,Medium,0,0,0,0,1,0,0,0,Very Large
+482,Medium,Small,0,1,0,0,0,0,0,1,Very Large
+483,Medium,Big,1,0,0,0,1,1,0,1,Very Large
+484,Medium,Medium,0,0,0,0,1,1,0,0,Very Large
+485,Medium,Small,0,1,0,1,0,0,0,1,Very Large
+486,Medium,Big,1,0,0,0,1,0,0,1,Very Large
+487,Medium,Medium,0,0,0,1,0,0,0,1,Very Large
+488,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+489,Medium,Small,0,1,0,1,0,0,0,1,Very Large
+490,Medium,Big,1,0,0,0,1,1,1,0,Very Large
+491,Small,Small,0,0,1,0,0,0,0,0,Very Large
+492,Medium,Big,0,0,0,0,0,0,1,0,Very Large
+493,Medium,Big,1,0,0,0,1,0,0,1,Very Large
+494,Medium,Medium,0,0,0,0,0,0,0,1,Very Large
+495,Small,Small,0,1,0,1,0,0,0,0,Very Large
+496,Small,Small,0,0,0,0,0,0,0,1,Very Large
+497,Medium,Medium,0,0,0,0,0,0,0,1,Very Large
+498,Medium,Medium,0,0,0,0,1,0,0,1,Very Large
+499,Medium,Big,1,0,0,0,1,0,0,1,Very Large

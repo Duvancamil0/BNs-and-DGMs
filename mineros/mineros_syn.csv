@@ -1,0 +1,446 @@
+Category_Time,Category_Overrun,Category_Cost,International_Project,Labor_Risk,Analysis_Risk,Decision_Risk,Engineering_Risk,Provider._Risk,Weather_Risk,Fabrication._Risk
+Small,Large,Small,0,0,0,1,0,0,0,0
+Medium,Very Large,Medium,0,1,0,1,1,0,0,1
+Medium,Very Large,Big,1,0,0,1,1,1,1,1
+Small,Small,Big,1,0,0,0,0,0,0,0
+Large,Very Large,Medium,0,0,1,1,0,0,0,0
+Small,Small,Medium,0,0,0,0,0,1,0,1
+Small,Very Large,Medium,0,0,0,1,0,1,0,0
+Small,Minimal,Medium,0,0,0,0,0,0,0,0
+Small,Small,Medium,0,0,0,0,0,1,0,0
+Medium,Very Large,Small,0,1,0,1,0,0,0,0
+Small,Medium,Small,0,0,1,1,1,0,0,0
+Medium,Medium,Medium,0,0,0,1,0,0,0,1
+Small,Small,Medium,0,0,0,0,0,1,0,0
+Medium,Very Large,Medium,0,0,0,0,1,0,0,1
+Small,Very Large,Medium,0,0,0,1,1,0,0,1
+Medium,Small,Medium,0,0,0,0,0,1,0,0
+Small,Medium,Big,0,0,0,0,0,0,0,0
+Large,Very Large,Medium,0,0,0,0,1,1,0,0
+Medium,Large,Medium,0,0,0,0,0,1,0,0
+Large,Large,Medium,0,0,1,1,0,0,0,1
+Medium,Large,Medium,0,0,0,0,1,1,0,0
+Medium,Small,Medium,0,0,1,0,0,1,0,1
+Medium,Very Large,Small,0,0,0,0,0,0,0,0
+Small,Very Large,Big,0,0,0,0,1,1,0,0
+Medium,Large,Medium,0,0,0,0,1,0,0,0
+Large,Very Large,Medium,0,0,0,0,0,0,0,1
+Small,Medium,Medium,0,0,0,0,1,0,0,1
+Small,Very Large,Medium,0,0,1,1,0,1,0,1
+Small,Very Large,Small,0,0,0,1,0,1,0,0
+Medium,Very Large,Medium,0,0,0,0,1,1,0,0
+Medium,Medium,Big,0,0,0,0,1,1,0,1
+Medium,Very Large,Medium,0,0,0,0,0,0,0,1
+Medium,Medium,Medium,0,0,0,0,0,1,0,0
+Small,Minimal,Big,1,0,0,0,0,0,0,0
+Small,Very Large,Medium,0,0,0,0,1,1,0,1
+Medium,Minimal,Medium,0,0,1,0,0,1,0,0
+Medium,Very Large,Big,0,0,0,0,0,1,0,1
+Medium,Very Large,Medium,0,0,0,0,1,0,0,1
+Medium,Minimal,Medium,0,0,0,0,0,0,0,0
+Large,Medium,Big,0,0,0,0,0,1,0,1
+Medium,Large,Medium,0,0,0,1,1,0,0,0
+Medium,Minimal,Medium,0,0,0,0,0,0,0,0
+Small,Very Large,Big,0,0,1,0,0,1,0,0
+Small,Very Large,Medium,0,0,0,0,0,0,0,1
+Small,Small,Big,1,0,1,0,1,0,0,0
+Medium,Very Large,Medium,0,0,0,0,1,0,0,0
+Large,Large,Medium,0,1,0,0,1,0,0,0
+Medium,Very Large,Medium,0,0,0,1,0,1,0,1
+Medium,Large,Medium,0,0,1,0,1,0,0,0
+Medium,Medium,Medium,0,0,0,1,0,0,0,0
+Large,Very Large,Big,0,1,0,0,0,0,0,1
+Medium,Very Large,Big,1,0,0,0,0,1,0,0
+Medium,Minimal,Big,0,0,0,0,0,0,0,1
+Medium,Medium,Medium,0,0,0,0,1,1,0,0
+Small,Minimal,Medium,0,0,0,0,1,1,0,0
+Small,Very Large,Big,1,0,0,0,0,1,0,1
+Small,Small,Big,0,0,0,0,1,0,0,1
+Medium,Very Large,Medium,0,0,0,1,1,0,0,1
+Medium,Very Large,Big,1,0,0,0,1,0,0,0
+Small,Very Large,Big,0,0,0,0,0,0,0,1
+Small,Small,Medium,0,1,0,0,0,1,0,0
+Large,Small,Big,0,0,0,0,0,0,0,0
+Medium,Very Large,Medium,0,0,0,0,1,0,1,1
+Small,Very Large,Medium,0,0,0,1,1,0,0,1
+Medium,Small,Small,0,0,0,1,0,0,0,0
+Large,Minimal,Big,0,0,0,0,0,0,0,0
+Small,Very Large,Medium,0,0,1,1,0,0,0,1
+Medium,Minimal,Medium,0,0,0,0,0,0,0,0
+Medium,Very Large,Medium,0,0,0,0,1,1,0,1
+Small,Medium,Medium,0,0,0,0,0,1,0,0
+Medium,Small,Small,0,1,0,0,1,0,0,1
+Large,Very Large,Medium,0,0,0,1,0,1,0,0
+Medium,Small,Big,1,0,0,0,0,0,0,0
+Small,Very Large,Small,0,0,0,0,0,0,0,1
+Medium,Small,Medium,0,0,1,1,0,0,0,0
+Small,Small,Small,0,0,0,0,1,1,0,0
+Medium,Small,Small,0,0,0,0,0,0,0,1
+Large,Minimal,Big,0,0,0,0,0,0,0,1
+Small,Very Large,Medium,0,0,1,0,0,0,0,1
+Small,Large,Medium,0,1,0,1,1,0,0,0
+Small,Small,Small,0,0,0,0,0,1,0,0
+Medium,Medium,Medium,0,0,0,0,0,0,0,0
+Medium,Medium,Big,1,0,0,0,0,0,0,0
+Medium,Minimal,Medium,0,0,0,0,0,1,0,0
+Medium,Minimal,Small,0,0,0,0,0,1,0,0
+Large,Small,Big,0,0,0,0,0,0,0,0
+Large,Minimal,Big,0,0,0,0,0,0,0,0
+Large,Minimal,Medium,0,0,0,0,0,1,0,0
+Large,Very Large,Big,0,0,0,0,0,0,0,1
+Small,Very Large,Medium,0,0,1,0,1,0,0,1
+Medium,Very Large,Big,1,0,0,0,0,1,0,1
+Large,Minimal,Medium,0,0,0,0,0,1,0,0
+Large,Minimal,Medium,0,0,0,0,0,0,0,0
+Small,Very Large,Small,0,0,0,1,1,0,0,0
+Medium,Small,Big,0,0,0,0,0,0,0,0
+Large,Large,Medium,0,1,0,0,0,0,0,1
+Medium,Very Large,Medium,0,0,0,1,1,0,0,0
+Small,Large,Medium,0,0,0,0,1,0,0,0
+Medium,Medium,Small,0,0,0,0,1,1,0,0
+Medium,Medium,Medium,0,0,0,0,1,0,0,1
+Medium,Small,Medium,0,0,0,0,0,0,0,1
+Medium,Large,Big,0,0,1,0,1,0,0,0
+Small,Minimal,Medium,0,0,0,0,0,0,0,0
+Large,Large,Medium,0,1,0,0,0,0,0,0
+Large,Medium,Medium,0,0,0,0,0,1,0,0
+Small,Very Large,Medium,0,1,1,1,0,0,0,0
+Small,Medium,Small,0,0,0,0,1,0,0,0
+Medium,Very Large,Small,1,0,0,0,0,1,0,1
+Small,Very Large,Big,1,0,0,0,1,1,1,0
+Small,Large,Big,0,0,0,0,0,1,0,0
+Small,Small,Big,0,0,0,0,0,0,0,1
+Small,Very Large,Small,0,0,0,0,1,0,0,0
+Small,Very Large,Small,0,0,0,0,0,0,0,0
+Small,Very Large,Big,0,1,0,1,0,0,0,1
+Small,Small,Big,1,0,0,0,1,0,0,1
+Small,Very Large,Medium,0,0,0,0,0,1,1,0
+Small,Large,Big,1,0,0,0,0,0,0,1
+Medium,Small,Big,1,0,0,0,1,1,0,1
+Medium,Very Large,Medium,0,0,1,0,1,0,0,0
+Medium,Minimal,Big,1,1,0,0,0,0,0,0
+Small,Small,Medium,0,0,0,0,0,1,0,0
+Medium,Medium,Big,1,0,0,1,1,1,0,0
+Medium,Very Large,Medium,0,1,0,1,0,0,0,1
+Medium,Large,Medium,0,0,0,0,1,0,0,0
+Medium,Medium,Big,1,0,0,0,0,0,0,0
+Small,Large,Medium,0,0,0,1,1,1,0,0
+Large,Medium,Medium,0,0,0,0,1,0,0,0
+Medium,Very Large,Small,1,0,0,0,1,1,1,0
+Small,Large,Big,0,0,0,1,0,0,0,0
+Medium,Large,Big,0,0,0,0,0,0,0,0
+Medium,Medium,Medium,0,1,0,1,0,0,0,0
+Small,Minimal,Medium,0,0,0,1,0,0,0,0
+Medium,Large,Medium,0,0,0,0,1,0,0,1
+Medium,Large,Medium,0,1,0,1,1,0,0,0
+Large,Minimal,Medium,0,1,0,0,0,0,0,0
+Medium,Very Large,Medium,0,1,0,1,0,0,0,0
+Small,Minimal,Small,0,0,0,0,0,1,0,0
+Medium,Large,Medium,0,0,0,0,0,1,1,0
+Small,Medium,Medium,0,0,0,0,0,1,0,1
+Medium,Large,Medium,0,0,0,0,0,0,0,0
+Large,Very Large,Medium,0,0,0,1,0,0,0,0
+Medium,Very Large,Medium,0,0,0,0,1,1,0,1
+Medium,Medium,Medium,0,0,0,0,1,0,0,1
+Large,Medium,Big,0,0,0,0,0,0,0,1
+Small,Very Large,Small,0,0,0,0,1,1,0,1
+Small,Large,Small,0,0,0,0,1,1,0,1
+Small,Large,Medium,0,1,0,0,0,0,0,1
+Large,Medium,Small,0,0,0,1,0,1,0,0
+Large,Small,Big,0,0,0,0,0,1,0,0
+Large,Minimal,Big,0,0,0,0,0,1,0,0
+Medium,Very Large,Medium,0,1,0,0,0,1,0,1
+Small,Small,Medium,0,0,0,0,0,0,0,0
+Small,Large,Small,0,1,0,1,0,0,0,0
+Medium,Small,Small,0,1,0,0,0,1,0,1
+Small,Small,Big,1,0,0,0,1,0,0,0
+Large,Very Large,Big,0,0,0,0,1,0,0,1
+Medium,Large,Small,0,0,0,0,0,1,0,0
+Small,Large,Big,0,0,0,1,0,0,0,0
+Medium,Very Large,Medium,0,0,0,0,1,0,0,1
+Medium,Small,Small,0,0,0,0,0,0,0,1
+Large,Large,Big,0,0,0,1,1,0,0,0
+Medium,Large,Big,1,0,0,0,1,0,0,0
+Medium,Medium,Big,0,0,0,0,1,0,0,0
+Large,Small,Medium,0,0,0,0,1,1,0,0
+Medium,Very Large,Medium,0,0,0,1,1,0,0,1
+Medium,Very Large,Big,1,0,0,0,0,0,0,0
+Small,Large,Medium,0,0,0,0,1,1,0,1
+Large,Very Large,Medium,0,0,0,0,0,1,0,1
+Medium,Large,Medium,0,1,0,0,1,1,0,0
+Small,Medium,Small,0,0,0,0,0,1,0,0
+Medium,Medium,Big,0,0,0,0,1,0,0,0
+Medium,Small,Medium,0,0,0,1,0,1,0,0
+Small,Very Large,Medium,0,0,1,0,0,0,0,1
+Small,Small,Small,0,0,0,0,0,0,0,1
+Medium,Small,Big,1,0,0,0,1,0,0,0
+Large,Very Large,Big,0,0,1,0,1,1,0,1
+Medium,Small,Big,0,0,0,0,0,0,0,0
+Large,Medium,Big,0,0,0,0,0,1,0,0
+Medium,Very Large,Medium,0,0,0,0,1,1,0,0
+Medium,Very Large,Big,0,0,0,0,0,0,0,0
+Large,Small,Big,0,0,0,0,0,0,0,1
+Large,Minimal,Big,0,0,0,0,0,0,0,0
+Medium,Very Large,Medium,0,0,0,0,0,0,0,1
+Medium,Small,Small,0,0,0,0,1,0,0,0
+Large,Small,Medium,0,0,0,0,0,0,0,0
+Medium,Minimal,Medium,0,0,1,1,0,0,0,0
+Small,Very Large,Small,0,0,0,0,1,0,0,1
+Small,Medium,Medium,0,0,1,1,0,0,0,0
+Small,Very Large,Medium,0,0,0,0,1,1,0,0
+Large,Large,Big,0,0,0,1,0,0,0,0
+Small,Medium,Big,1,0,0,0,0,0,0,0
+Large,Minimal,Medium,0,0,0,0,0,0,0,1
+Medium,Minimal,Medium,0,1,0,0,0,0,0,1
+Small,Very Large,Medium,0,0,0,1,0,0,0,0
+Large,Very Large,Big,1,1,1,1,0,0,0,0
+Medium,Very Large,Big,1,0,1,1,0,1,0,1
+Medium,Minimal,Medium,0,0,0,0,0,0,0,0
+Large,Very Large,Medium,0,0,0,1,0,0,0,1
+Small,Medium,Small,0,0,1,0,1,0,0,1
+Small,Medium,Medium,0,0,0,0,0,0,0,0
+Small,Medium,Big,0,0,0,0,0,1,0,0
+Large,Minimal,Medium,0,0,0,0,0,1,0,0
+Large,Small,Big,1,0,1,0,0,1,0,0
+Medium,Large,Medium,0,0,0,0,1,1,0,0
+Small,Very Large,Small,0,0,0,1,1,0,0,1
+Medium,Very Large,Big,0,0,0,0,1,1,0,0
+Small,Medium,Small,0,1,0,0,1,0,0,1
+Large,Minimal,Medium,0,0,0,0,0,1,0,0
+Medium,Very Large,Medium,0,0,0,0,0,0,0,0
+Large,Very Large,Medium,0,0,0,0,1,0,0,1
+Small,Very Large,Medium,0,0,0,0,1,0,0,1
+Small,Medium,Medium,0,0,0,1,0,0,0,0
+Medium,Medium,Medium,0,0,0,1,0,0,0,0
+Medium,Small,Medium,0,0,0,0,0,0,0,0
+Small,Very Large,Small,0,0,0,0,1,0,0,0
+Medium,Very Large,Big,1,0,0,0,1,0,0,1
+Medium,Large,Medium,0,0,0,0,0,1,0,0
+Small,Large,Medium,0,0,0,0,1,1,0,1
+Large,Minimal,Big,0,0,0,0,0,0,0,0
+Small,Very Large,Medium,0,0,0,0,0,0,0,0
+Medium,Very Large,Medium,0,1,0,1,0,1,0,1
+Large,Minimal,Medium,0,1,0,0,0,0,0,0
+Medium,Medium,Medium,0,0,0,0,1,1,0,0
+Medium,Medium,Small,0,0,1,0,0,1,0,0
+Large,Minimal,Big,0,0,0,0,0,0,0,0
+Small,Large,Small,0,0,1,1,0,0,0,0
+Small,Large,Big,1,0,0,0,1,0,0,1
+Medium,Small,Medium,0,1,0,0,0,1,0,0
+Medium,Very Large,Medium,0,0,0,1,1,0,0,0
+Medium,Very Large,Small,0,0,0,0,1,1,0,0
+Large,Minimal,Medium,0,0,0,0,0,1,0,0
+Large,Small,Medium,0,0,0,0,0,0,0,0
+Large,Medium,Small,0,0,0,0,0,1,0,1
+Small,Minimal,Medium,0,0,0,0,0,0,0,0
+Small,Large,Small,0,1,0,0,1,0,0,0
+Medium,Very Large,Medium,0,0,0,1,1,1,0,1
+Medium,Very Large,Medium,0,0,0,1,0,0,0,1
+Large,Large,Big,0,0,0,0,0,0,0,1
+Large,Large,Big,0,0,0,0,1,0,0,0
+Large,Small,Small,0,0,0,0,1,1,0,0
+Large,Medium,Big,0,0,0,0,0,0,0,1
+Large,Very Large,Small,0,0,0,0,0,1,0,0
+Medium,Very Large,Big,1,1,0,0,1,1,0,1
+Small,Very Large,Medium,0,0,1,1,0,0,0,1
+Large,Minimal,Big,0,0,0,0,1,0,0,0
+Medium,Very Large,Medium,0,1,0,1,0,1,0,0
+Large,Medium,Big,0,0,0,0,0,0,0,1
+Small,Minimal,Big,0,0,0,0,0,0,0,0
+Large,Small,Big,0,0,0,0,0,0,0,0
+Small,Very Large,Small,0,0,1,0,0,0,0,0
+Large,Very Large,Small,0,0,0,0,1,1,0,0
+Small,Very Large,Medium,0,0,0,0,1,0,0,0
+Large,Minimal,Small,0,0,0,0,0,0,0,1
+Large,Minimal,Medium,0,0,0,0,1,0,0,0
+Large,Very Large,Medium,0,0,0,1,0,0,0,1
+Medium,Minimal,Medium,0,0,0,0,0,0,0,0
+Medium,Large,Medium,0,0,0,1,0,1,0,0
+Small,Minimal,Big,0,0,0,0,0,1,0,0
+Medium,Very Large,Medium,0,0,0,0,0,1,0,1
+Small,Medium,Small,0,0,0,0,0,0,0,0
+Large,Minimal,Medium,0,0,0,1,0,1,0,0
+Medium,Very Large,Medium,0,0,0,0,1,1,0,0
+Medium,Small,Big,0,0,0,0,0,1,0,0
+Large,Medium,Small,0,0,0,0,0,0,0,1
+Large,Very Large,Small,0,0,0,0,0,1,0,1
+Small,Medium,Big,1,0,0,0,0,0,0,0
+Large,Small,Big,0,0,0,0,0,0,0,0
+Small,Very Large,Small,0,1,0,0,1,1,0,1
+Small,Large,Big,0,0,0,0,0,0,0,1
+Small,Very Large,Small,0,1,0,0,1,1,0,1
+Small,Medium,Big,0,0,0,0,0,0,0,1
+Large,Small,Big,0,0,0,0,0,0,0,0
+Medium,Very Large,Medium,0,0,0,0,1,0,0,0
+Small,Large,Medium,0,0,0,0,0,0,0,0
+Medium,Very Large,Small,0,0,0,0,0,0,0,1
+Medium,Very Large,Big,1,0,0,0,1,0,0,1
+Medium,Very Large,Medium,0,0,0,0,0,0,0,0
+Large,Very Large,Big,0,0,0,0,1,1,0,1
+Large,Large,Big,0,0,0,0,1,0,0,0
+Large,Very Large,Big,0,0,0,0,0,0,0,1
+Medium,Large,Medium,0,0,0,1,1,0,0,0
+Large,Very Large,Medium,0,1,1,0,1,0,0,0
+Small,Small,Small,0,1,0,0,0,1,0,1
+Medium,Large,Medium,0,1,0,0,0,1,0,0
+Large,Small,Small,0,0,0,0,0,0,1,0
+Medium,Very Large,Medium,0,0,0,1,0,0,0,1
+Small,Medium,Small,0,0,1,1,0,0,0,0
+Large,Large,Big,0,0,0,0,1,0,0,0
+Small,Large,Medium,0,0,0,0,0,0,0,0
+Large,Very Large,Big,0,0,0,0,1,0,0,1
+Small,Very Large,Medium,0,0,1,0,0,1,0,1
+Large,Minimal,Big,0,0,0,0,1,0,0,1
+Medium,Small,Big,0,0,0,0,1,0,0,0
+Small,Very Large,Big,0,0,1,0,1,0,0,1
+Small,Very Large,Small,0,0,0,0,0,0,0,1
+Medium,Very Large,Big,1,0,0,0,1,1,0,0
+Large,Small,Big,0,0,0,0,0,0,0,0
+Large,Minimal,Big,0,0,0,0,0,0,0,0
+Large,Small,Big,0,1,0,0,0,0,0,1
+Large,Minimal,Big,0,0,0,0,0,0,0,1
+Medium,Large,Medium,0,0,0,0,1,1,0,0
+Medium,Small,Big,1,0,0,0,1,1,0,0
+Large,Minimal,Small,0,0,0,0,0,1,0,0
+Medium,Large,Big,0,0,0,1,1,0,0,0
+Medium,Minimal,Small,0,0,0,0,0,1,0,0
+Small,Very Large,Big,1,0,0,0,1,0,0,0
+Medium,Very Large,Big,1,1,0,0,1,0,1,1
+Medium,Very Large,Medium,0,0,0,0,1,0,0,0
+Medium,Large,Medium,0,0,0,0,1,1,0,0
+Medium,Large,Medium,0,0,0,0,0,0,0,0
+Small,Minimal,Medium,0,0,0,0,0,0,0,0
+Small,Medium,Small,0,0,0,0,1,0,0,0
+Large,Minimal,Medium,0,0,1,0,0,0,0,0
+Large,Very Large,Small,0,0,0,0,1,0,0,0
+Large,Very Large,Big,0,0,0,1,1,1,0,1
+Large,Small,Big,0,0,0,0,0,0,0,1
+Small,Minimal,Big,0,0,0,0,0,0,0,0
+Small,Very Large,Medium,0,0,0,1,0,0,0,1
+Large,Large,Medium,0,1,0,0,1,0,0,1
+Medium,Small,Big,1,0,0,0,1,1,0,0
+Small,Small,Medium,0,0,0,0,1,1,0,1
+Small,Very Large,Big,1,0,0,0,1,1,0,1
+Medium,Large,Medium,0,0,0,0,1,0,0,0
+Small,Very Large,Small,0,0,0,0,1,0,0,0
+Large,Large,Small,0,1,0,0,0,0,0,1
+Medium,Large,Medium,0,0,0,0,0,1,0,0
+Large,Small,Big,0,0,0,0,0,0,0,1
+Medium,Very Large,Medium,0,0,0,1,0,1,0,1
+Small,Large,Small,0,0,0,1,0,1,0,0
+Medium,Large,Medium,0,0,0,0,1,0,0,1
+Large,Large,Medium,0,0,0,0,0,0,0,0
+Large,Minimal,Medium,0,0,0,0,0,0,0,0
+Small,Minimal,Medium,0,0,0,0,0,0,0,0
+Small,Medium,Medium,0,0,0,0,0,1,0,0
+Large,Very Large,Big,0,1,0,0,1,1,0,1
+Large,Medium,Medium,0,0,0,0,1,0,0,1
+Medium,Very Large,Medium,0,0,0,0,1,1,0,1
+Medium,Small,Big,1,0,0,0,0,0,1,0
+Medium,Minimal,Big,0,0,0,0,0,0,0,0
+Small,Medium,Medium,0,0,0,0,0,0,0,1
+Large,Large,Medium,0,1,0,0,1,1,0,1
+Large,Minimal,Big,0,0,0,0,0,0,0,0
+Small,Very Large,Small,0,0,0,0,0,1,0,0
+Medium,Very Large,Big,1,0,0,0,1,1,0,1
+Small,Small,Big,0,0,0,0,0,0,0,1
+Large,Medium,Big,0,0,0,0,0,1,0,0
+Medium,Medium,Medium,0,0,0,0,0,0,0,0
+Small,Medium,Big,0,0,0,0,0,0,0,0
+Small,Medium,Medium,0,0,0,0,0,1,0,0
+Medium,Very Large,Medium,0,0,0,1,0,0,0,1
+Small,Very Large,Big,1,0,0,0,0,1,0,1
+Small,Large,Big,1,0,0,0,0,0,0,1
+Medium,Very Large,Medium,0,0,0,0,0,0,0,0
+Small,Medium,Small,0,0,0,0,0,0,0,0
+Medium,Medium,Medium,0,0,0,1,0,1,0,0
+Large,Small,Medium,0,0,0,1,0,0,0,0
+Large,Small,Big,0,0,0,0,0,0,0,1
+Small,Medium,Medium,0,0,0,0,0,0,0,1
+Medium,Very Large,Medium,0,0,0,0,1,1,0,0
+Large,Very Large,Medium,0,1,0,0,0,1,0,1
+Medium,Very Large,Medium,0,1,0,0,1,0,0,0
+Medium,Large,Medium,0,0,0,0,0,1,0,1
+Medium,Very Large,Medium,0,0,0,0,1,0,0,1
+Medium,Very Large,Medium,0,0,0,0,0,0,0,0
+Medium,Minimal,Big,0,0,0,0,0,0,0,0
+Small,Very Large,Medium,0,1,0,1,0,0,0,0
+Large,Small,Medium,0,0,1,1,0,0,0,1
+Small,Very Large,Big,0,0,0,0,1,0,0,0
+Large,Medium,Big,0,0,0,0,0,0,0,0
+Small,Large,Big,0,0,0,0,1,1,0,1
+Small,Medium,Small,0,0,1,1,0,0,0,1
+Medium,Minimal,Medium,0,0,0,0,1,0,0,0
+Large,Very Large,Medium,0,0,0,0,1,0,0,0
+Medium,Very Large,Medium,0,0,0,0,1,1,0,0
+Medium,Minimal,Small,0,0,0,0,1,0,0,0
+Small,Very Large,Small,0,0,0,0,1,0,0,1
+Large,Large,Big,0,0,0,0,0,0,0,0
+Medium,Very Large,Medium,0,0,0,0,0,1,0,1
+Large,Minimal,Small,0,0,0,0,1,0,0,0
+Small,Very Large,Medium,0,0,0,0,1,1,0,1
+Medium,Very Large,Medium,0,1,0,0,0,1,1,0
+Medium,Very Large,Medium,0,0,0,0,1,1,0,1
+Small,Very Large,Big,1,1,0,0,1,0,0,1
+Small,Very Large,Small,0,0,0,1,1,0,0,0
+Large,Large,Medium,0,0,0,0,1,0,0,0
+Medium,Large,Medium,0,1,0,0,1,0,0,0
+Small,Very Large,Medium,0,0,1,0,1,0,0,0
+Large,Minimal,Medium,0,0,0,1,0,0,0,0
+Large,Minimal,Big,0,0,0,0,0,0,0,0
+Medium,Very Large,Big,1,0,0,0,0,0,0,1
+Medium,Large,Big,0,0,0,0,0,0,0,1
+Large,Large,Medium,0,0,0,0,1,0,0,0
+Small,Medium,Medium,0,0,0,0,0,0,0,0
+Small,Medium,Medium,0,1,1,1,0,0,0,0
+Small,Medium,Big,1,0,0,0,1,0,0,0
+Large,Medium,Medium,0,0,0,1,0,1,0,0
+Small,Very Large,Medium,0,0,0,1,0,0,0,0
+Large,Medium,Small,0,1,0,1,0,0,0,0
+Small,Very Large,Medium,0,0,0,0,1,1,0,1
+Medium,Very Large,Medium,0,1,0,0,0,1,0,1
+Medium,Very Large,Medium,0,0,0,0,1,0,0,1
+Large,Medium,Big,0,0,0,0,0,0,0,0
+Small,Small,Medium,0,1,0,0,1,1,0,0
+Medium,Large,Big,0,0,0,0,0,0,0,0
+Medium,Very Large,Big,1,0,0,0,1,1,0,1
+Medium,Large,Medium,0,0,0,0,0,0,0,0
+Small,Very Large,Medium,0,0,0,0,1,0,0,1
+Medium,Very Large,Medium,0,0,0,1,1,0,0,1
+Large,Minimal,Small,0,0,0,0,0,0,0,0
+Medium,Very Large,Big,1,0,0,0,1,0,0,1
+Medium,Large,Big,1,0,0,1,1,0,0,0
+Medium,Small,Medium,0,0,1,1,1,0,0,0
+Small,Large,Medium,0,1,0,0,0,0,0,0
+Small,Medium,Small,0,0,0,0,1,0,0,0
+Large,Large,Big,0,0,0,0,1,0,0,0
+Medium,Very Large,Big,1,1,0,0,0,0,0,0
+Medium,Very Large,Medium,0,0,1,1,0,0,0,0
+Medium,Small,Big,0,0,0,0,0,0,0,1
+Large,Very Large,Big,0,0,1,1,1,1,1,0
+Small,Large,Medium,0,0,0,1,0,0,0,0
+Medium,Large,Medium,0,0,0,0,1,0,0,0
+Medium,Very Large,Medium,0,0,0,1,1,0,0,0
+Small,Very Large,Big,1,1,0,0,1,1,1,1
+Large,Small,Big,0,0,0,0,0,0,0,0
+Large,Large,Medium,0,0,0,0,0,1,0,1
+Small,Very Large,Medium,0,0,0,1,1,0,0,0
+Small,Very Large,Medium,0,0,0,0,0,1,0,0
+Small,Medium,Small,0,1,0,1,0,0,0,1
+Small,Very Large,Medium,0,0,0,1,0,0,0,0
+Medium,Minimal,Big,1,0,0,0,0,1,0,0
+Large,Medium,Medium,0,0,0,0,0,0,0,0
+Medium,Small,Medium,0,1,0,1,0,0,0,1
+Large,Very Large,Small,0,0,0,0,1,0,0,1
+Large,Large,Big,0,0,0,0,1,1,0,1
+Small,Very Large,Medium,0,0,0,0,1,0,1,0
+Medium,Large,Big,1,0,0,0,0,0,0,0
+Small,Medium,Small,0,0,0,1,0,1,0,0
+Medium,Small,Medium,0,0,0,0,0,1,0,1
+Large,Minimal,Medium,0,1,0,0,0,0,0,0
+Small,Large,Big,0,0,0,0,0,0,0,0
+Large,Medium,Big,0,0,0,0,0,1,0,0
+Small,Large,Big,1,1,0,0,0,0,1,0
+Small,Large,Medium,0,1,0,1,0,1,0,1
+Medium,Very Large,Big,1,0,0,0,1,1,1,1
+Large,Very Large,Big,0,0,0,0,1,1,0,1
