@@ -1,0 +1,29 @@
+{
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+    "columns": {
+        "asia": {
+            "sdtype": "categorical"
+        },
+        "tub": {
+            "sdtype": "categorical"
+        },
+        "smoke": {
+            "sdtype": "categorical"
+        },
+        "lung": {
+            "sdtype": "categorical"
+        },
+        "bronc": {
+            "sdtype": "categorical"
+        },
+        "either": {
+            "sdtype": "categorical"
+        },
+        "xray": {
+            "sdtype": "categorical"
+        },
+        "dysp": {
+            "sdtype": "categorical"
+        }
+    }
+}
