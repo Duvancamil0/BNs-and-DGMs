@@ -1,0 +1,189 @@
+---
+title: "Learning BNs - INSURANCE synthetic 500"
+output: html_notebook
+---
+
+Learning of BNs from augmented datasets created via deep generative models.
+
+Get the libraries
+```{r}
+library(bnlearn)
+library(dplyr)
+library(Rgraphviz)
+```
+
+Import the original data
+```{r}
+df <- read.csv("/alarm/alarm.csv")
+df[sapply(df, is.character)] <- lapply(df[sapply(df, is.character)], 
+                                       as.factor)
+df[sapply(df, is.logical)] <- lapply(df[sapply(df, is.logical)], 
+                                       as.factor)
+```
+
+
+Original BN
+```{r}
+modelstring = paste0("[HISTORY|LVFAILURE][CVP|LVEDVOLUME][PCWP|LVEDVOLUME][HYPOVOLEMIA][LVEDVOLUME|HYPOVOLEMIA:LVFAILURE][LVFAILURE]",
+  "[STROKEVOLUME|HYPOVOLEMIA:LVFAILURE][ERRLOWOUTPUT][HRBP|ERRLOWOUTPUT:HR][HREKG|ERRCAUTER:HR][ERRCAUTER][HRSAT|ERRCAUTER:HR][INSUFFANESTH]",
+  "[ANAPHYLAXIS][TPR|ANAPHYLAXIS][EXPCO2|ARTCO2:VENTLUNG][KINKEDTUBE][MINVOL|INTUBATION:VENTLUNG][FIO2][PVSAT|FIO2:VENTALV]",
+  "[SAO2|PVSAT:SHUNT][PAP|PULMEMBOLUS][PULMEMBOLUS][SHUNT|INTUBATION:PULMEMBOLUS][INTUBATION][PRESS|INTUBATION:KINKEDTUBE:VENTTUBE][DISCONNECT]",
+  "[MINVOLSET][VENTMACH|MINVOLSET][VENTTUBE|DISCONNECT:VENTMACH][VENTLUNG|INTUBATION:KINKEDTUBE:VENTTUBE][VENTALV|INTUBATION:VENTLUNG]",
+  "[ARTCO2|VENTALV][CATECHOL|ARTCO2:INSUFFANESTH:SAO2:TPR][HR|CATECHOL][CO|HR:STROKEVOLUME][BP|CO:TPR]")
+original = model2network(modelstring)
+graphviz.plot(original, shape = "ellipse")
+fitted_original = bn.fit(original, df, method = "bayes")
+
+distance <- 0
+bayes_factor <- 0
+bics <- score(original, df, type = "bic")
+kullback <- 0
+```
+
+Get the sample 500 dataset
+```{r}
+stratified_500 = read.csv("/alarm/Samples/stratified_500.csv")
+stratified_500[sapply(stratified_500, is.character)] <- 
+  lapply(stratified_500[sapply(stratified_500, is.character)],as.factor)
+stratified_500[sapply(stratified_500, is.logical)] <- 
+  lapply(stratified_500[sapply(stratified_500, is.logical)],as.factor)
+summary(stratified_500)
+```
+
+
+Import the synthetic 500 data
+```{r}
+synthetic_500 = read.csv("/alarm/Synthetic/Mostly/alarm_500_syn.csv")
+synthetic_500[sapply(synthetic_500, is.character)] <- 
+  lapply(synthetic_500[sapply(synthetic_500, is.character)],as.factor)
+synthetic_500[sapply(synthetic_500, is.logical)] <- 
+  lapply(synthetic_500[sapply(synthetic_500, is.logical)],as.factor)
+summary(synthetic_500)
+```
+
+# Get 500*2 synthetic samples
+```{r}
+set.seed(1)
+synthetic_500_2 <- synthetic_500 %>%
+  group_by(MINVOLSET) %>%
+  sample_frac(size=0.1)
+synthetic_500_2 <- as.data.frame(synthetic_500_2)
+summary(synthetic_500_2)
+```
+
+Perform Union on the datasets
+```{r}
+synthetic_500_u_2 <- rbind(synthetic_500_2, stratified_500)
+summary(synthetic_500_u_2)
+```
+
+Learn the BN structure with the synthetic data from stratified_500_2
+```{r}
+BN_synth_500_2 <- tabu(synthetic_500_u_2)
+fitted_synth_500_2 = bn.fit(original, synthetic_500_u_2, method = "bayes")
+graphviz.plot(BN_synth_500_2)
+
+distance <- c(distance, shd(original, BN_synth_500_2, debug = TRUE))
+bayes_factor <- c(bayes_factor, BF(original, BN_synth_500_2, df, score = "bds"))
+bics <- c(bics,score(BN_synth_500_2, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_500_2))
+```
+
+# Get 500*5 synthetic samples
+```{r}
+set.seed(1)
+synthetic_500_5 <- synthetic_500 %>%
+  group_by(MINVOLSET) %>%
+  sample_frac(size=0.25)
+synthetic_500_5 <- as.data.frame(synthetic_500_5)
+summary(synthetic_500_5)
+```
+
+Perform Union on the datasets
+```{r}
+synthetic_500_u_5 <- rbind(synthetic_500_5, stratified_500)
+summary(synthetic_500_u_5)
+```
+
+Learn the BN structure with the synthetic data from stratified_500_5
+```{r}
+BN_synth_500_5 <- tabu(synthetic_500_u_5)
+fitted_synth_500_5 = bn.fit(original, synthetic_500_u_5, method = "bayes")
+graphviz.plot(BN_synth_500_5)
+
+distance <- c(distance, shd(original, BN_synth_500_5, debug = TRUE))
+bayes_factor <- c(bayes_factor, BF(original, BN_synth_500_5, df, score = "bds"))
+bics <- c(bics,score(BN_synth_500_5, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_500_5))
+```
+
+# Get 500*10 synthetic samples
+```{r}
+set.seed(1)
+synthetic_500_10 <- synthetic_500 %>%
+  group_by(MINVOLSET) %>%
+  sample_frac(size=0.50)
+synthetic_500_10 <- as.data.frame(synthetic_500_10)
+summary(synthetic_500_10)
+```
+
+Perform Union on the datasets
+```{r}
+synthetic_500_u_10 <- rbind(synthetic_500_10, stratified_500)
+summary(synthetic_500_u_10)
+```
+
+Learn the BN structure with the synthetic data from stratified_500_10
+```{r}
+BN_synth_500_10 <- tabu(synthetic_500_u_10)
+fitted_synth_500_10 = bn.fit(original, synthetic_500_u_10, method = "bayes")
+graphviz.plot(BN_synth_500_10)
+
+distance <- c(distance, shd(original, BN_synth_500_10, debug = TRUE))
+bayes_factor <- c(bayes_factor, BF(original, BN_synth_500_10, df, score = "bds"))
+bics <- c(bics,score(BN_synth_500_10, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_500_10))
+```
+
+# Get 500*20 synthetic samples
+```{r}
+set.seed(1)
+synthetic_500_20 <- synthetic_500
+summary(synthetic_500_20)
+```
+
+Perform Union on the datasets
+```{r}
+synthetic_500_u_20 <- rbind(synthetic_500_20, stratified_500)
+summary(synthetic_500_u_20)
+```
+
+Learn the BN structure with the synthetic data from stratified_500_20
+```{r}
+BN_synth_500_20 <- tabu(synthetic_500_u_20)
+fitted_synth_500_20 = bn.fit(original, synthetic_500_u_20, method = "bayes")
+graphviz.plot(BN_synth_500_20)
+
+distance <- c(distance, shd(original, BN_synth_500_20, debug = TRUE))
+bayes_factor <- c(bayes_factor, BF(original, BN_synth_500_20, df, score = "bds"))
+bics <- c(bics,score(BN_synth_500_20, df, type = "bic"))
+
+kullback <- c(kullback,KL(fitted_original, fitted_synth_500_20))
+```
+
+# Metrics
+```{r}
+matrix_empty <- matrix(nrow = 5, ncol = 1)
+metrics_table = data.frame(matrix_empty)
+metrics_table$bics <- bics
+metrics_table$bf <- bayes_factor
+metrics_table$shd <- distance
+metrics_table$kullback <- kullback
+metrics_table <- metrics_table[,-c(1)]
+row.names(metrics_table) <- c("Full", "Sample*2", "Sample*5", "Sample*10", "Sample*20")
+metrics_table
+```
+

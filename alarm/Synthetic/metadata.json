@@ -1,0 +1,116 @@
+{
+    "METADATA_SPEC_VERSION": "SINGLE_TABLE_V1",
+    "columns": {
+        "VENTLUNG": {
+            "sdtype": "categorical"
+        },
+        "MINVOLSET": {
+            "sdtype": "categorical"
+        },
+        "DISCONNECT": {
+            "sdtype": "boolean"
+        },
+        "VENTMACH": {
+            "sdtype": "categorical"
+        },
+        "PRESS": {
+            "sdtype": "categorical"
+        },
+        "FIO2": {
+            "sdtype": "categorical"
+        },
+        "PVSAT": {
+            "sdtype": "categorical"
+        },
+        "EXPCO2": {
+            "sdtype": "categorical"
+        },
+        "HREKG": {
+            "sdtype": "categorical"
+        },
+        "ERRCAUTER": {
+            "sdtype": "boolean"
+        },
+        "HRBP": {
+            "sdtype": "categorical"
+        },
+        "ERRLOWOUTPUT": {
+            "sdtype": "boolean"
+        },
+        "MINVOL": {
+            "sdtype": "categorical"
+        },
+        "KINKEDTUBE": {
+            "sdtype": "boolean"
+        },
+        "STROKEVOLUME": {
+            "sdtype": "categorical"
+        },
+        "LVFAILURE": {
+            "sdtype": "boolean"
+        },
+        "LVEDVOLUME": {
+            "sdtype": "categorical"
+        },
+        "HYPOVOLEMIA": {
+            "sdtype": "boolean"
+        },
+        "HRSAT": {
+            "sdtype": "categorical"
+        },
+        "HISTORY": {
+            "sdtype": "boolean"
+        },
+        "ANAPHYLAXIS": {
+            "sdtype": "boolean"
+        },
+        "PAP": {
+            "sdtype": "categorical"
+        },
+        "INTUBATION": {
+            "sdtype": "categorical"
+        },
+        "VENTTUBE": {
+            "sdtype": "categorical"
+        },
+        "VENTALV": {
+            "sdtype": "categorical"
+        },
+        "CATECHOL": {
+            "sdtype": "categorical"
+        },
+        "ARTCO2": {
+            "sdtype": "categorical"
+        },
+        "HR": {
+            "sdtype": "categorical"
+        },
+        "CO": {
+            "sdtype": "categorical"
+        },
+        "BP": {
+            "sdtype": "categorical"
+        },
+        "TPR": {
+            "sdtype": "categorical"
+        },
+        "PCWP": {
+            "sdtype": "categorical"
+        },
+        "INSUFFANESTH": {
+            "sdtype": "boolean"
+        },
+        "SHUNT": {
+            "sdtype": "categorical"
+        },
+        "PULMEMBOLUS": {
+            "sdtype": "boolean"
+        },
+        "CVP": {
+            "sdtype": "categorical"
+        },
+        "SAO2": {
+            "sdtype": "categorical"
+        }
+    }
+}
